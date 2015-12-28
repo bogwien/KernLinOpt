@@ -1,0 +1,9 @@
+c:\users\богдан\documents\visual studio 2015\Projects\KernLinOpt\KernLinOpt\bin\Debug\KernLinOpt.exe.config
+c:\users\богдан\documents\visual studio 2015\Projects\KernLinOpt\KernLinOpt\bin\Debug\KernLinOpt.exe
+c:\users\богдан\documents\visual studio 2015\Projects\KernLinOpt\KernLinOpt\bin\Debug\KernLinOpt.pdb
+c:\users\богдан\documents\visual studio 2015\Projects\KernLinOpt\KernLinOpt\obj\Debug\KernLinOpt.csprojResolveAssemblyReference.cache
+c:\users\богдан\documents\visual studio 2015\Projects\KernLinOpt\KernLinOpt\obj\Debug\KernLinOpt.Properties.Resources.resources
+c:\users\богдан\documents\visual studio 2015\Projects\KernLinOpt\KernLinOpt\obj\Debug\KernLinOpt.csproj.GenerateResource.Cache
+c:\users\богдан\documents\visual studio 2015\Projects\KernLinOpt\KernLinOpt\obj\Debug\KernLinOpt.exe
+c:\users\богдан\documents\visual studio 2015\Projects\KernLinOpt\KernLinOpt\obj\Debug\KernLinOpt.pdb
+c:\users\богдан\documents\visual studio 2015\Projects\KernLinOpt\KernLinOpt\obj\Debug\KernLinOpt.FormMain.resources
