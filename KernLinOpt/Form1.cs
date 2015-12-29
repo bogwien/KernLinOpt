@@ -26,19 +26,37 @@ namespace KernLinOpt
             objKL       = new KernLin(size,trying);
             objKL.RandArr();
             labelGenerator.Text = "Массив из " + size + " элементов - готов!";
+            buttonInitCalc.Enabled = true;
+            buttonReset.Enabled = true;
+            domainUpDownTry.Enabled = false;
+            domainUpDownSize.Enabled = false;
         }
 
         private void buttonInitCalc_Click(object sender, EventArgs e)
         {
             int InitRes = objKL.calcInitItems();
             labelInitCalc.Text = "Результат: " + InitRes + " мешков";
+            buttonOptimizator.Enabled = true;
         }
 
         private void buttonOptimizator_Click(object sender, EventArgs e)
         {
+            buttonOptimizator.Enabled = false;
             int result = objKL.doKernLin();
             labelOptimizator.Text = "Ответ: "+ result + " мешков";
-            
+            buttonOptimizator.Enabled = true;
+
+        }
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            domainUpDownTry.Enabled = true;
+            domainUpDownSize.Enabled = true;
+            buttonOptimizator.Enabled = false;
+            buttonInitCalc.Enabled = false;
+            labelGenerator.Text = "Сгенерируйте массив";
+            labelInitCalc.Text = "Оцените начальную последовательность";
+            labelOptimizator.Text = "Оптимизируйте!";
         }
     }
 }

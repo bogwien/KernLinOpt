@@ -40,10 +40,12 @@
             this.domainUpDownTry = new System.Windows.Forms.DomainUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.buttonReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonOptimizator
             // 
+            this.buttonOptimizator.Enabled = false;
             this.buttonOptimizator.Location = new System.Drawing.Point(216, 114);
             this.buttonOptimizator.Name = "buttonOptimizator";
             this.buttonOptimizator.Size = new System.Drawing.Size(107, 23);
@@ -83,6 +85,7 @@
             // 
             // buttonInitCalc
             // 
+            this.buttonInitCalc.Enabled = false;
             this.buttonInitCalc.Location = new System.Drawing.Point(216, 85);
             this.buttonInitCalc.Name = "buttonInitCalc";
             this.buttonInitCalc.Size = new System.Drawing.Size(107, 23);
@@ -270,11 +273,23 @@
             this.label3.Text = "2. Действия с данными";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // buttonReset
+            // 
+            this.buttonReset.Enabled = false;
+            this.buttonReset.Location = new System.Drawing.Point(142, 79);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(41, 29);
+            this.buttonReset.TabIndex = 13;
+            this.buttonReset.Text = "reset";
+            this.buttonReset.UseVisualStyleBackColor = true;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(551, 151);
+            this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.domainUpDownTry);
@@ -308,6 +323,7 @@
         private System.Windows.Forms.DomainUpDown domainUpDownTry;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonReset;
     }
 }
 
