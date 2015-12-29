@@ -22,33 +22,33 @@ namespace KernLinOpt
 
     class KernLin
     {
-        private int minValue    = 40,
-                    maxValue    = 80,
-                    capacity    = 100,
+        private int minValue = 40,
+                    maxValue = 80,
+                    capacity = 100,
                     eps,
                     trying,
                     limiter,
                     size;
 
         private int[] initArr,
-                      array, 
+                      array,
                       arrayTmp,
-                      itemsArr, 
+                      itemsArr,
                       itemsArrTmp;
 
         public KernLin(int sizeInp, int tryingInp)
         {
-            initArr     = new int[sizeInp];
-            array       = new int[sizeInp];
-            arrayTmp    = new int[sizeInp];
-            size        = sizeInp;
-            trying      = tryingInp;
-            limiter     = (sizeInp / 3);
+            initArr = new int[sizeInp];
+            array = new int[sizeInp];
+            arrayTmp = new int[sizeInp];
+            size = sizeInp;
+            trying = tryingInp;
+            limiter = (sizeInp / 3);
         }
         public void RandArr()
         {
             Random rnd = new Random();
-            for (int i=0;i < size; i++)
+            for (int i = 0; i < size; i++)
             {
                 initArr[i] = rnd.Next(minValue, maxValue);
             }
@@ -56,12 +56,12 @@ namespace KernLinOpt
         }
         private int[] calcItems(int[] arr)
         {
-            int j=0;
+            int j = 0;
             List<int> items = new List<int>();
-            while (j< size)
+            while (j < size)
             {
                 int curItem = 0;
-                while ((j< size) && ((capacity - curItem)> arr[j]))
+                while ((j < size) && ((capacity - curItem) > arr[j]))
                 {
                     curItem += arr[j];
                     ++j;
@@ -77,7 +77,7 @@ namespace KernLinOpt
         }
         private void swapArrElements()
         {
-            for(int i=0;i<eps;++i)
+            for (int i = 0; i < eps; ++i)
             {
                 Random rnd = new Random();
                 int pos1 = rnd.Next(0, size - 1);
@@ -90,7 +90,7 @@ namespace KernLinOpt
         private bool compareResidues()
         {
             int i = 0, sizeItems = itemsArr.Length;
-            while(i < sizeItems)
+            while (i < sizeItems)
             {
                 if (itemsArrTmp[i] < itemsArr[i])
                     return true;
@@ -109,34 +109,37 @@ namespace KernLinOpt
             eps *= (eps < limiter) ? 2 : 1;
             return true;
         }
-        public int doKernLin()
+        public async Task<int> DoKernLinAsync()
         {
             eps = 4;
-            itemsArr = calcItems(array);
-            while (eps >= 1)
+            await Task.Run(() =>
             {
-                Boolean better = false;
-                for(int i=0; i < trying; i++)
+                itemsArr = calcItems(array);
+                while (eps >= 1)
                 {
-                    if (eps >= 1)
+                    Boolean better = false;
+                    for (int i = 0; i < trying; i++)
                     {
-                        swapArrElements();
-                        itemsArrTmp = calcItems(arrayTmp);
-                        if (itemsArr.Length > itemsArrTmp.Length)
+                        if (eps >= 1)
                         {
-                            better = ifSuccessful();
-                            break;
+                            swapArrElements();
+                            itemsArrTmp = calcItems(arrayTmp);
+                            if (itemsArr.Length > itemsArrTmp.Length)
+                            {
+                                better = ifSuccessful();
+                                break;
+                            }
+                            else if ((itemsArr.Length == itemsArrTmp.Length) && compareResidues())
+                            {
+                                better = ifSuccessful();
+                                break;
+                            }
                         }
-                        else if ((itemsArr.Length == itemsArrTmp.Length) && compareResidues())
-                        {
-                            better = ifSuccessful();
-                            break;
-                        }
+                        else break;
                     }
-                    else break;
+                    if (!better) eps /= 2;
                 }
-                if(!better) eps /= 2;
-            }
+            });
             return itemsArr.Length;
         }
     }
