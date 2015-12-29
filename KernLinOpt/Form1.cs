@@ -44,6 +44,8 @@ namespace KernLinOpt
             //5. Включаем кнопки оценки и reset
             buttonInitCalc.Enabled = true;
             buttonReset.Enabled = true;
+            //6. Выбираем в фокус кнопку оценки
+            buttonInitCalc.Select();
         }
 
         private void buttonInitCalc_Click(object sender, EventArgs e)
@@ -57,18 +59,28 @@ namespace KernLinOpt
 
             //2. Включаем возможность вызвать оптимизацию
             buttonOptimizator.Enabled = true;
+            
+            //3. Выбираем в фокус кнопку оптимизации
+            buttonOptimizator.Select();
         }
 
         private async void buttonOptimizator_Click(object sender, EventArgs e)
         {
+            //0. Выключаем кнопки
             buttonGenerator.Enabled = false;
-            buttonInitCalc.Enabled = false;
             buttonReset.Enabled = false;
+            
+            //1. Делаем асинхронно оптимизацию и выводим результат
             int result = await objKL.DoKernLinAsync();
             labelOptimizator.Text = "Ответ: "+ result + " мешков";
+            
+            //2. Включаем кнопки
             buttonOptimizator.Enabled = true;
             buttonGenerator.Enabled = true;
             buttonReset.Enabled = true;
+
+            //3. Выбираем в фокус кнопку оптимизации
+            buttonOptimizator.Select();
         }
 
         private void buttonReset_Click(object sender, EventArgs e)
@@ -86,6 +98,9 @@ namespace KernLinOpt
             labelGenerator.Text = "Сгенерируйте массив";
             labelInitCalc.Text = "Оцените начальную последовательность";
             labelOptimizator.Text = "Оптимизируйте!";
+
+            //3. Выбираем в фокус кнопку генерации
+            buttonGenerator.Select();
         }
     }
 }
