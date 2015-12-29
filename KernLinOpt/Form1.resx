@@ -117,718 +117,877 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="domainUpDownTry.Items68" xml:space="preserve">
-    <value>2000</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonOptimizator.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonOptimizator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 16</value>
+  <data name="buttonOptimizator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 114</value>
   </data>
-  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="buttonOptimizator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 23</value>
+  </data>
+  <data name="buttonOptimizator.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="buttonOptimizator.Text" xml:space="preserve">
+    <value>Оптимизировать</value>
+  </data>
+  <data name="&gt;&gt;buttonOptimizator.Name" xml:space="preserve">
+    <value>buttonOptimizator</value>
+  </data>
+  <data name="&gt;&gt;buttonOptimizator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonOptimizator.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonOptimizator.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="labelGenerator.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelGenerator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelGenerator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>329, 61</value>
+  </data>
+  <data name="labelGenerator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 13</value>
+  </data>
+  <data name="labelGenerator.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelGenerator.Text" xml:space="preserve">
+    <value>Сгенерируйте массив</value>
+  </data>
+  <data name="labelGenerator.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="domainUpDownTry.Items29" xml:space="preserve">
-    <value>90</value>
+  <data name="&gt;&gt;labelGenerator.Name" xml:space="preserve">
+    <value>labelGenerator</value>
   </data>
-  <data name="domainUpDownTry.Items4" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="domainUpDownTry.Items56" xml:space="preserve">
-    <value>600</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="labelOptimizator.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="domainUpDownTry.Items17" xml:space="preserve">
-    <value>32</value>
+  <data name="&gt;&gt;labelGenerator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelGenerator.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="labelSize.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+  <data name="&gt;&gt;labelGenerator.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="buttonGenerator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonGenerator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 56</value>
+  </data>
+  <data name="buttonGenerator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 23</value>
+  </data>
+  <data name="buttonGenerator.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="buttonGenerator.Text" xml:space="preserve">
+    <value>Сгенерировать</value>
   </data>
   <data name="&gt;&gt;buttonGenerator.Name" xml:space="preserve">
     <value>buttonGenerator</value>
   </data>
-  <data name="buttonOptimizator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 114</value>
+  <data name="&gt;&gt;buttonGenerator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonGenerator.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonGenerator.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="labelOptimizator.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelOptimizator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelOptimizator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>329, 119</value>
+  </data>
+  <data name="labelOptimizator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 13</value>
+  </data>
+  <data name="labelOptimizator.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="labelOptimizator.Text" xml:space="preserve">
+    <value>Оптимизируйте!</value>
+  </data>
+  <data name="&gt;&gt;labelOptimizator.Name" xml:space="preserve">
+    <value>labelOptimizator</value>
+  </data>
+  <data name="&gt;&gt;labelOptimizator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelOptimizator.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelOptimizator.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="buttonInitCalc.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="buttonInitCalc.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonInitCalc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 85</value>
+  </data>
+  <data name="buttonInitCalc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 23</value>
+  </data>
+  <data name="buttonInitCalc.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="buttonInitCalc.Text" xml:space="preserve">
+    <value>Оценить</value>
+  </data>
+  <data name="&gt;&gt;buttonInitCalc.Name" xml:space="preserve">
+    <value>buttonInitCalc</value>
+  </data>
+  <data name="&gt;&gt;buttonInitCalc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonInitCalc.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonInitCalc.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="labelInitCalc.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelInitCalc.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelInitCalc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>329, 90</value>
+  </data>
+  <data name="labelInitCalc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 13</value>
+  </data>
+  <data name="labelInitCalc.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labelInitCalc.Text" xml:space="preserve">
+    <value>Оцените начальную последовательность</value>
+  </data>
+  <data name="&gt;&gt;labelInitCalc.Name" xml:space="preserve">
+    <value>labelInitCalc</value>
+  </data>
   <data name="&gt;&gt;labelInitCalc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelInitCalc.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelInitCalc.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="domainUpDownSize.Items" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="domainUpDownSize.Items1" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="domainUpDownSize.Items2" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="domainUpDownSize.Items3" xml:space="preserve">
+    <value>150</value>
+  </data>
+  <data name="domainUpDownSize.Items4" xml:space="preserve">
+    <value>200</value>
+  </data>
+  <data name="domainUpDownSize.Items5" xml:space="preserve">
+    <value>250</value>
+  </data>
+  <data name="domainUpDownSize.Items6" xml:space="preserve">
+    <value>300</value>
+  </data>
+  <data name="domainUpDownSize.Items7" xml:space="preserve">
+    <value>350</value>
+  </data>
+  <data name="domainUpDownSize.Items8" xml:space="preserve">
+    <value>400</value>
+  </data>
+  <data name="domainUpDownSize.Items9" xml:space="preserve">
+    <value>450</value>
+  </data>
+  <data name="domainUpDownSize.Items10" xml:space="preserve">
+    <value>500</value>
+  </data>
+  <data name="domainUpDownSize.Items11" xml:space="preserve">
+    <value>600</value>
+  </data>
+  <data name="domainUpDownSize.Items12" xml:space="preserve">
+    <value>700</value>
+  </data>
+  <data name="domainUpDownSize.Items13" xml:space="preserve">
+    <value>800</value>
+  </data>
+  <data name="domainUpDownSize.Items14" xml:space="preserve">
+    <value>900</value>
+  </data>
+  <data name="domainUpDownSize.Items15" xml:space="preserve">
+    <value>1000</value>
+  </data>
+  <data name="domainUpDownSize.Items16" xml:space="preserve">
+    <value>1250</value>
+  </data>
+  <data name="domainUpDownSize.Items17" xml:space="preserve">
+    <value>1500</value>
+  </data>
+  <data name="domainUpDownSize.Items18" xml:space="preserve">
+    <value>1750</value>
+  </data>
+  <data name="domainUpDownSize.Items19" xml:space="preserve">
+    <value>2000</value>
+  </data>
+  <data name="domainUpDownSize.Items20" xml:space="preserve">
+    <value>2500</value>
+  </data>
+  <data name="domainUpDownSize.Items21" xml:space="preserve">
+    <value>3000</value>
+  </data>
+  <data name="domainUpDownSize.Items22" xml:space="preserve">
+    <value>3500</value>
+  </data>
+  <data name="domainUpDownSize.Items23" xml:space="preserve">
+    <value>4000</value>
+  </data>
+  <data name="domainUpDownSize.Items24" xml:space="preserve">
+    <value>4500</value>
+  </data>
+  <data name="domainUpDownSize.Items25" xml:space="preserve">
+    <value>5000</value>
+  </data>
+  <data name="domainUpDownSize.Items26" xml:space="preserve">
+    <value>6000</value>
+  </data>
+  <data name="domainUpDownSize.Items27" xml:space="preserve">
+    <value>7000</value>
+  </data>
+  <data name="domainUpDownSize.Items28" xml:space="preserve">
+    <value>8000</value>
+  </data>
+  <data name="domainUpDownSize.Items29" xml:space="preserve">
+    <value>9000</value>
+  </data>
+  <data name="domainUpDownSize.Items30" xml:space="preserve">
+    <value>10000</value>
+  </data>
+  <data name="domainUpDownSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 70</value>
+  </data>
+  <data name="domainUpDownSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="domainUpDownSize.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="domainUpDownSize.Text" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="domainUpDownSize.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;domainUpDownSize.Name" xml:space="preserve">
+    <value>domainUpDownSize</value>
+  </data>
+  <data name="&gt;&gt;domainUpDownSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DomainUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;domainUpDownSize.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;domainUpDownSize.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="labelSize.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelSize.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 54</value>
+  </data>
+  <data name="labelSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 13</value>
+  </data>
+  <data name="labelSize.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="labelSize.Text" xml:space="preserve">
+    <value>Число элементов</value>
+  </data>
+  <data name="labelSize.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;labelSize.Name" xml:space="preserve">
+    <value>labelSize</value>
+  </data>
+  <data name="&gt;&gt;labelSize.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelSize.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="domainUpDownTry.Items5" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="domainUpDownSize.Items26" xml:space="preserve">
-    <value>6000</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="domainUpDownTry.Items27" xml:space="preserve">
-    <value>80</value>
-  </data>
-  <data name="&gt;&gt;labelGenerator.Name" xml:space="preserve">
-    <value>labelGenerator</value>
-  </data>
-  <data name="domainUpDownTry.Items51" xml:space="preserve">
-    <value>450</value>
-  </data>
-  <data name="domainUpDownTry.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
-  </data>
-  <data name="domainUpDownSize.Items12" xml:space="preserve">
-    <value>700</value>
-  </data>
-  <data name="domainUpDownTry.Items34" xml:space="preserve">
-    <value>130</value>
-  </data>
-  <data name="domainUpDownTry.Items12" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="domainUpDownTry.Items49" xml:space="preserve">
-    <value>390</value>
-  </data>
-  <data name="buttonReset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 79</value>
-  </data>
-  <data name="domainUpDownTry.Items6" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="domainUpDownTry.Items65" xml:space="preserve">
-    <value>1250</value>
-  </data>
-  <data name="domainUpDownTry.Items22" xml:space="preserve">
-    <value>55</value>
-  </data>
-  <data name="domainUpDownSize.Items22" xml:space="preserve">
-    <value>3500</value>
-  </data>
-  <data name="domainUpDownTry.Items37" xml:space="preserve">
-    <value>160</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Задача bin packing</value>
-  </data>
-  <data name="domainUpDownTry.Items44" xml:space="preserve">
-    <value>260</value>
-  </data>
-  <data name="&gt;&gt;labelInitCalc.Name" xml:space="preserve">
-    <value>labelInitCalc</value>
-  </data>
-  <data name="&gt;&gt;buttonGenerator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonReset.Name" xml:space="preserve">
-    <value>buttonReset</value>
-  </data>
-  <data name="domainUpDownSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 70</value>
-  </data>
-  <data name="domainUpDownTry.Items59" xml:space="preserve">
-    <value>750</value>
-  </data>
-  <data name="domainUpDownTry.Items7" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="domainUpDownSize.Items14" xml:space="preserve">
-    <value>900</value>
-  </data>
-  <data name="&gt;&gt;labelSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 54</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;labelInitCalc.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="domainUpDownTry.Items47" xml:space="preserve">
-    <value>330</value>
-  </data>
-  <data name="domainUpDownTry.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="domainUpDownTry.Items54" xml:space="preserve">
-    <value>540</value>
-  </data>
-  <data name="buttonInitCalc.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="domainUpDownSize.Items24" xml:space="preserve">
-    <value>4500</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="labelSize.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="domainUpDownTry.Items15" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="domainUpDownTry.Items8" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="domainUpDownSize.Items10" xml:space="preserve">
-    <value>500</value>
-  </data>
-  <data name="buttonGenerator.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="domainUpDownTry.Items42" xml:space="preserve">
-    <value>220</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>2. Действия с данными</value>
-  </data>
-  <data name="buttonInitCalc.Text" xml:space="preserve">
-    <value>Оценить</value>
-  </data>
-  <data name="domainUpDownTry.Items57" xml:space="preserve">
-    <value>650</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="domainUpDownSize.Items" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="labelInitCalc.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
   <data name="&gt;&gt;labelSize.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="domainUpDownTry.Items10" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;labelInitCalc.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="domainUpDownSize.Items20" xml:space="preserve">
-    <value>2500</value>
-  </data>
-  <data name="labelGenerator.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="domainUpDownTry.Items25" xml:space="preserve">
-    <value>70</value>
-  </data>
-  <data name="&gt;&gt;buttonReset.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="domainUpDownTry.Items9" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="domainUpDownTry.Items52" xml:space="preserve">
-    <value>480</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="domainUpDownTry.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="domainUpDownTry.Items24" xml:space="preserve">
-    <value>65</value>
-  </data>
-  <data name="&gt;&gt;labelOptimizator.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="domainUpDownTry.Items13" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="buttonReset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 29</value>
-  </data>
-  <data name="labelSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 13</value>
-  </data>
-  <data name="domainUpDownSize.Items4" xml:space="preserve">
-    <value>200</value>
-  </data>
-  <data name="domainUpDownTry.Items74" xml:space="preserve">
-    <value>5000</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="domainUpDownTry.Items35" xml:space="preserve">
-    <value>140</value>
-  </data>
-  <data name="domainUpDownTry.Items20" xml:space="preserve">
-    <value>45</value>
-  </data>
-  <data name="labelOptimizator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 13</value>
-  </data>
-  <data name="domainUpDownTry.Items62" xml:space="preserve">
-    <value>900</value>
-  </data>
-  <data name="domainUpDownSize.Items17" xml:space="preserve">
-    <value>1500</value>
-  </data>
-  <data name="labelOptimizator.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="domainUpDownTry.Items66" xml:space="preserve">
-    <value>1500</value>
-  </data>
-  <data name="domainUpDownTry.Items23" xml:space="preserve">
-    <value>60</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 93</value>
-  </data>
-  <data name="domainUpDownSize.Items16" xml:space="preserve">
-    <value>1250</value>
-  </data>
-  <data name="&gt;&gt;domainUpDownSize.Name" xml:space="preserve">
-    <value>domainUpDownSize</value>
-  </data>
-  <data name="domainUpDownTry.Items30" xml:space="preserve">
-    <value>95</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormMain</value>
-  </data>
-  <data name="labelOptimizator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>329, 119</value>
-  </data>
-  <data name="domainUpDownTry.Items45" xml:space="preserve">
-    <value>280</value>
-  </data>
-  <data name="buttonInitCalc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 23</value>
-  </data>
-  <data name="domainUpDownTry.Text" xml:space="preserve">
-    <value>100</value>
-  </data>
-  <data name="domainUpDownTry.Items72" xml:space="preserve">
-    <value>4000</value>
-  </data>
-  <data name="&gt;&gt;domainUpDownTry.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;domainUpDownTry.Name" xml:space="preserve">
-    <value>domainUpDownTry</value>
-  </data>
-  <data name="domainUpDownTry.Items33" xml:space="preserve">
-    <value>120</value>
-  </data>
-  <data name="domainUpDownSize.Items5" xml:space="preserve">
-    <value>250</value>
-  </data>
-  <data name="domainUpDownTry.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 111</value>
-  </data>
-  <data name="&gt;&gt;labelGenerator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>567, 189</value>
-  </data>
-  <data name="&gt;&gt;buttonOptimizator.Name" xml:space="preserve">
-    <value>buttonOptimizator</value>
-  </data>
-  <data name="domainUpDownTry.Items40" xml:space="preserve">
-    <value>190</value>
-  </data>
-  <data name="domainUpDownTry.Items69" xml:space="preserve">
-    <value>2500</value>
-  </data>
-  <data name="domainUpDownTry.Items55" xml:space="preserve">
-    <value>570</value>
-  </data>
-  <data name="labelOptimizator.Text" xml:space="preserve">
-    <value>Оптимизируйте!</value>
-  </data>
-  <data name="domainUpDownTry.Items" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;buttonInitCalc.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 16</value>
-  </data>
-  <data name="domainUpDownSize.Items1" xml:space="preserve">
-    <value>50</value>
-  </data>
-  <data name="domainUpDownTry.Items43" xml:space="preserve">
-    <value>240</value>
-  </data>
-  <data name="labelSize.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelInitCalc.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="buttonOptimizator.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;labelSize.Name" xml:space="preserve">
-    <value>labelSize</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="domainUpDownTry.Items11" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="labelInitCalc.Text" xml:space="preserve">
-    <value>Оцените начальную последовательность</value>
-  </data>
-  <data name="domainUpDownSize.Items2" xml:space="preserve">
-    <value>100</value>
-  </data>
-  <data name="domainUpDownTry.Items53" xml:space="preserve">
-    <value>510</value>
-  </data>
-  <data name="buttonInitCalc.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="domainUpDownSize.Items9" xml:space="preserve">
-    <value>450</value>
-  </data>
-  <data name="domainUpDownSize.Items19" xml:space="preserve">
-    <value>2000</value>
-  </data>
-  <data name="domainUpDownTry.Items60" xml:space="preserve">
-    <value>800</value>
-  </data>
-  <data name="domainUpDownSize.Items7" xml:space="preserve">
-    <value>350</value>
-  </data>
-  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="domainUpDownTry.Items21" xml:space="preserve">
-    <value>50</value>
-  </data>
-  <data name="&gt;&gt;buttonReset.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelGenerator.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;buttonInitCalc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonInitCalc.Name" xml:space="preserve">
-    <value>buttonInitCalc</value>
-  </data>
-  <data name="domainUpDownTry.Items39" xml:space="preserve">
-    <value>180</value>
-  </data>
-  <data name="&gt;&gt;buttonOptimizator.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="domainUpDownSize.Text" xml:space="preserve">
-    <value>50</value>
-  </data>
-  <data name="domainUpDownTry.Items63" xml:space="preserve">
-    <value>1000</value>
-  </data>
-  <data name="domainUpDownSize.Items8" xml:space="preserve">
-    <value>400</value>
-  </data>
-  <data name="domainUpDownTry.Items70" xml:space="preserve">
-    <value>3000</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="domainUpDownTry.Items67" xml:space="preserve">
-    <value>1750</value>
-  </data>
-  <data name="domainUpDownTry.Items31" xml:space="preserve">
-    <value>100</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 17</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="domainUpDownSize.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="domainUpDownTry.Items73" xml:space="preserve">
-    <value>4500</value>
-  </data>
-  <data name="labelSize.Text" xml:space="preserve">
-    <value>Число элементов</value>
-  </data>
-  <data name="domainUpDownSize.Items27" xml:space="preserve">
-    <value>7000</value>
-  </data>
-  <data name="labelGenerator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>329, 61</value>
-  </data>
-  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="domainUpDownSize.Items29" xml:space="preserve">
-    <value>9000</value>
-  </data>
-  <data name="domainUpDownSize.Items13" xml:space="preserve">
-    <value>800</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;labelOptimizator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonInitCalc.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;labelGenerator.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="domainUpDownSize.Items18" xml:space="preserve">
-    <value>1750</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="domainUpDownTry.Items41" xml:space="preserve">
-    <value>200</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="buttonGenerator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 56</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="domainUpDownSize.Items23" xml:space="preserve">
-    <value>4000</value>
-  </data>
-  <data name="domainUpDownTry.Items18" xml:space="preserve">
-    <value>36</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>1. Начальные параметры</value>
-  </data>
-  <data name="labelInitCalc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>329, 90</value>
-  </data>
-  <data name="&gt;&gt;buttonReset.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonGenerator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 23</value>
-  </data>
-  <data name="domainUpDownSize.Items28" xml:space="preserve">
-    <value>8000</value>
-  </data>
-  <data name="&gt;&gt;buttonOptimizator.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="buttonGenerator.Text" xml:space="preserve">
-    <value>Сгенерировать</value>
-  </data>
-  <data name="&gt;&gt;buttonGenerator.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="domainUpDownSize.Items15" xml:space="preserve">
-    <value>1000</value>
-  </data>
-  <data name="labelInitCalc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 13</value>
-  </data>
-  <data name="&gt;&gt;domainUpDownSize.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="labelGenerator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 13</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 13</value>
-  </data>
-  <data name="domainUpDownSize.Items30" xml:space="preserve">
-    <value>10000</value>
-  </data>
-  <data name="buttonReset.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;domainUpDownSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DomainUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonReset.Text" xml:space="preserve">
-    <value>reset</value>
-  </data>
-  <data name="domainUpDownSize.Items25" xml:space="preserve">
-    <value>5000</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Допустимых попыток</value>
-  </data>
-  <data name="domainUpDownSize.Items6" xml:space="preserve">
-    <value>300</value>
-  </data>
-  <data name="domainUpDownTry.Items16" xml:space="preserve">
-    <value>28</value>
-  </data>
-  <data name="buttonOptimizator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 23</value>
-  </data>
-  <data name="domainUpDownSize.Items11" xml:space="preserve">
-    <value>600</value>
-  </data>
-  <data name="domainUpDownSize.Items21" xml:space="preserve">
-    <value>3000</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="domainUpDownTry.Items38" xml:space="preserve">
-    <value>170</value>
-  </data>
-  <data name="labelGenerator.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="buttonOptimizator.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="domainUpDownSize.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="buttonReset.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="domainUpDownTry.Items71" xml:space="preserve">
-    <value>3500</value>
-  </data>
-  <data name="domainUpDownTry.Items1" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="buttonOptimizator.Text" xml:space="preserve">
-    <value>Оптимизировать</value>
-  </data>
-  <data name="domainUpDownTry.Items50" xml:space="preserve">
-    <value>420</value>
-  </data>
-  <data name="domainUpDownTry.Items26" xml:space="preserve">
-    <value>75</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 17</value>
-  </data>
-  <data name="&gt;&gt;domainUpDownTry.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;labelOptimizator.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;labelOptimizator.Name" xml:space="preserve">
-    <value>labelOptimizator</value>
-  </data>
-  <data name="&gt;&gt;domainUpDownSize.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="domainUpDownTry.Items48" xml:space="preserve">
-    <value>360</value>
-  </data>
-  <data name="domainUpDownTry.Items64" xml:space="preserve">
-    <value>1100</value>
-  </data>
-  <data name="domainUpDownTry.Items61" xml:space="preserve">
-    <value>850</value>
-  </data>
-  <data name="domainUpDownTry.Items32" xml:space="preserve">
-    <value>110</value>
-  </data>
-  <data name="domainUpDownTry.Items2" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="domainUpDownSize.Items3" xml:space="preserve">
-    <value>150</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="domainUpDownTry.Items14" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="domainUpDownTry.Items36" xml:space="preserve">
-    <value>150</value>
-  </data>
-  <data name="&gt;&gt;domainUpDownTry.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DomainUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>551, 151</value>
-  </data>
-  <data name="domainUpDownSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
-  </data>
-  <data name="label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="domainUpDownTry.Items58" xml:space="preserve">
-    <value>700</value>
-  </data>
-  <data name="domainUpDownTry.Items28" xml:space="preserve">
-    <value>85</value>
-  </data>
-  <data name="&gt;&gt;buttonOptimizator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="domainUpDownTry.Items19" xml:space="preserve">
-    <value>40</value>
-  </data>
-  <data name="domainUpDownTry.Items3" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="domainUpDownTry.Items46" xml:space="preserve">
-    <value>300</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="buttonInitCalc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 85</value>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="labelGenerator.Text" xml:space="preserve">
-    <value>Сгенерируйте массив</value>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 93</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Допустимых попыток</value>
+  </data>
+  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="domainUpDownTry.Items" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="domainUpDownTry.Items1" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="domainUpDownTry.Items2" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="domainUpDownTry.Items3" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="domainUpDownTry.Items4" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="domainUpDownTry.Items5" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="domainUpDownTry.Items6" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="domainUpDownTry.Items7" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="domainUpDownTry.Items8" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="domainUpDownTry.Items9" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="domainUpDownTry.Items10" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="domainUpDownTry.Items11" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="domainUpDownTry.Items12" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="domainUpDownTry.Items13" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="domainUpDownTry.Items14" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="domainUpDownTry.Items15" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="domainUpDownTry.Items16" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="domainUpDownTry.Items17" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="domainUpDownTry.Items18" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="domainUpDownTry.Items19" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="domainUpDownTry.Items20" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="domainUpDownTry.Items21" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="domainUpDownTry.Items22" xml:space="preserve">
+    <value>55</value>
+  </data>
+  <data name="domainUpDownTry.Items23" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="domainUpDownTry.Items24" xml:space="preserve">
+    <value>65</value>
+  </data>
+  <data name="domainUpDownTry.Items25" xml:space="preserve">
+    <value>70</value>
+  </data>
+  <data name="domainUpDownTry.Items26" xml:space="preserve">
+    <value>75</value>
+  </data>
+  <data name="domainUpDownTry.Items27" xml:space="preserve">
+    <value>80</value>
+  </data>
+  <data name="domainUpDownTry.Items28" xml:space="preserve">
+    <value>85</value>
+  </data>
+  <data name="domainUpDownTry.Items29" xml:space="preserve">
+    <value>90</value>
+  </data>
+  <data name="domainUpDownTry.Items30" xml:space="preserve">
+    <value>95</value>
+  </data>
+  <data name="domainUpDownTry.Items31" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="domainUpDownTry.Items32" xml:space="preserve">
+    <value>110</value>
+  </data>
+  <data name="domainUpDownTry.Items33" xml:space="preserve">
+    <value>120</value>
+  </data>
+  <data name="domainUpDownTry.Items34" xml:space="preserve">
+    <value>130</value>
+  </data>
+  <data name="domainUpDownTry.Items35" xml:space="preserve">
+    <value>140</value>
+  </data>
+  <data name="domainUpDownTry.Items36" xml:space="preserve">
+    <value>150</value>
+  </data>
+  <data name="domainUpDownTry.Items37" xml:space="preserve">
+    <value>160</value>
+  </data>
+  <data name="domainUpDownTry.Items38" xml:space="preserve">
+    <value>170</value>
+  </data>
+  <data name="domainUpDownTry.Items39" xml:space="preserve">
+    <value>180</value>
+  </data>
+  <data name="domainUpDownTry.Items40" xml:space="preserve">
+    <value>190</value>
+  </data>
+  <data name="domainUpDownTry.Items41" xml:space="preserve">
+    <value>200</value>
+  </data>
+  <data name="domainUpDownTry.Items42" xml:space="preserve">
+    <value>220</value>
+  </data>
+  <data name="domainUpDownTry.Items43" xml:space="preserve">
+    <value>240</value>
+  </data>
+  <data name="domainUpDownTry.Items44" xml:space="preserve">
+    <value>260</value>
+  </data>
+  <data name="domainUpDownTry.Items45" xml:space="preserve">
+    <value>280</value>
+  </data>
+  <data name="domainUpDownTry.Items46" xml:space="preserve">
+    <value>300</value>
+  </data>
+  <data name="domainUpDownTry.Items47" xml:space="preserve">
+    <value>330</value>
+  </data>
+  <data name="domainUpDownTry.Items48" xml:space="preserve">
+    <value>360</value>
+  </data>
+  <data name="domainUpDownTry.Items49" xml:space="preserve">
+    <value>390</value>
+  </data>
+  <data name="domainUpDownTry.Items50" xml:space="preserve">
+    <value>420</value>
+  </data>
+  <data name="domainUpDownTry.Items51" xml:space="preserve">
+    <value>450</value>
+  </data>
+  <data name="domainUpDownTry.Items52" xml:space="preserve">
+    <value>480</value>
+  </data>
+  <data name="domainUpDownTry.Items53" xml:space="preserve">
+    <value>510</value>
+  </data>
+  <data name="domainUpDownTry.Items54" xml:space="preserve">
+    <value>540</value>
+  </data>
+  <data name="domainUpDownTry.Items55" xml:space="preserve">
+    <value>570</value>
+  </data>
+  <data name="domainUpDownTry.Items56" xml:space="preserve">
+    <value>600</value>
+  </data>
+  <data name="domainUpDownTry.Items57" xml:space="preserve">
+    <value>650</value>
+  </data>
+  <data name="domainUpDownTry.Items58" xml:space="preserve">
+    <value>700</value>
+  </data>
+  <data name="domainUpDownTry.Items59" xml:space="preserve">
+    <value>750</value>
+  </data>
+  <data name="domainUpDownTry.Items60" xml:space="preserve">
+    <value>800</value>
+  </data>
+  <data name="domainUpDownTry.Items61" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="domainUpDownTry.Items62" xml:space="preserve">
+    <value>900</value>
+  </data>
+  <data name="domainUpDownTry.Items63" xml:space="preserve">
+    <value>1000</value>
+  </data>
+  <data name="domainUpDownTry.Items64" xml:space="preserve">
+    <value>1100</value>
+  </data>
+  <data name="domainUpDownTry.Items65" xml:space="preserve">
+    <value>1250</value>
+  </data>
+  <data name="domainUpDownTry.Items66" xml:space="preserve">
+    <value>1500</value>
+  </data>
+  <data name="domainUpDownTry.Items67" xml:space="preserve">
+    <value>1750</value>
+  </data>
+  <data name="domainUpDownTry.Items68" xml:space="preserve">
+    <value>2000</value>
+  </data>
+  <data name="domainUpDownTry.Items69" xml:space="preserve">
+    <value>2500</value>
+  </data>
+  <data name="domainUpDownTry.Items70" xml:space="preserve">
+    <value>3000</value>
+  </data>
+  <data name="domainUpDownTry.Items71" xml:space="preserve">
+    <value>3500</value>
+  </data>
+  <data name="domainUpDownTry.Items72" xml:space="preserve">
+    <value>4000</value>
+  </data>
+  <data name="domainUpDownTry.Items73" xml:space="preserve">
+    <value>4500</value>
+  </data>
+  <data name="domainUpDownTry.Items74" xml:space="preserve">
+    <value>5000</value>
+  </data>
+  <data name="domainUpDownTry.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 111</value>
+  </data>
+  <data name="domainUpDownTry.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="domainUpDownTry.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="domainUpDownTry.Text" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="domainUpDownTry.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;domainUpDownTry.Name" xml:space="preserve">
+    <value>domainUpDownTry</value>
+  </data>
+  <data name="&gt;&gt;domainUpDownTry.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DomainUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;domainUpDownTry.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;domainUpDownTry.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 17</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 16</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>1. Начальные параметры</value>
+  </data>
+  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 17</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 16</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>2. Действия с данными</value>
+  </data>
+  <data name="label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonReset.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="buttonReset.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonReset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 79</value>
+  </data>
+  <data name="buttonReset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 29</value>
+  </data>
+  <data name="buttonReset.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="buttonReset.Text" xml:space="preserve">
+    <value>reset</value>
+  </data>
+  <data name="&gt;&gt;buttonReset.Name" xml:space="preserve">
+    <value>buttonReset</value>
+  </data>
+  <data name="&gt;&gt;buttonReset.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonReset.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonReset.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="toolStripStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 17</value>
+  </data>
+  <data name="toolStripStatusLabel.Text" xml:space="preserve">
+    <value>Готово!</value>
+  </data>
+  <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 519</value>
+  </data>
+  <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>547, 22</value>
+  </data>
+  <data name="statusStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="statusStrip.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Name" xml:space="preserve">
+    <value>statusStrip</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonSave.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="buttonSave.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>232, 162</value>
+  </data>
+  <data name="buttonSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="buttonSave.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="buttonSave.Text" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="&gt;&gt;buttonSave.Name" xml:space="preserve">
+    <value>buttonSave</value>
+  </data>
+  <data name="&gt;&gt;buttonSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonSave.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonSave.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 216</value>
+  </data>
+  <data name="chart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>528, 300</value>
+  </data>
+  <data name="chart.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chart.Text" xml:space="preserve">
+    <value>chart</value>
+  </data>
+  <data name="&gt;&gt;chart.Name" xml:space="preserve">
+    <value>chart</value>
+  </data>
+  <data name="&gt;&gt;chart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;chart.Parent" xml:space="preserve">
+    <value>panel</value>
+  </data>
+  <data name="&gt;&gt;chart.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>547, 541</value>
+  </data>
+  <data name="panel.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;panel.Name" xml:space="preserve">
+    <value>panel</value>
+  </data>
+  <data name="&gt;&gt;panel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ru-RU</value>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>46</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>547, 541</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>567, 583</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>567, 583</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Задача bin packing</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel.Name" xml:space="preserve">
+    <value>toolStripStatusLabel</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

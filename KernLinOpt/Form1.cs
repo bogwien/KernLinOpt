@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace KernLinOpt
 {
@@ -31,16 +32,16 @@ namespace KernLinOpt
             domainUpDownSize.Enabled = false;
 
             //2. Вызываем конструктор
-            int trying  = Convert.ToInt32(domainUpDownTry.Text);
-            int size    = Convert.ToInt32(domainUpDownSize.Text);
-            objKL       = new KernLin(size,trying);
+            int trying = Convert.ToInt32(domainUpDownTry.Text);
+            int size = Convert.ToInt32(domainUpDownSize.Text);
+            objKL = new KernLin(size, trying);
 
             //3. Заполняем массив случайными данными
             objKL.RandArr();
 
             //4. Отображаем результат в label
             labelGenerator.Text = "Массив из " + size + " элементов - готов!";
-            
+
             //5. Включаем кнопки оценки и reset
             buttonInitCalc.Enabled = true;
             buttonReset.Enabled = true;
@@ -54,14 +55,16 @@ namespace KernLinOpt
             buttonInitCalc.Enabled = false;
 
             //1. Выполняем оценку массива и выводим результат в label
-            int InitRes = objKL.calcInitItems();
-            labelInitCalc.Text = "Результат: " + InitRes + " мешков";
+            int[] InitRes = objKL.calcInitItems();
+            int InitResLength = InitRes.Length;
+            labelInitCalc.Text = "Результат: " + InitResLength + " мешков";
 
             //2. Включаем возможность вызвать оптимизацию
             buttonOptimizator.Enabled = true;
-            
+
             //3. Выбираем в фокус кнопку оптимизации
             buttonOptimizator.Select();
+            this.chart.Series["SeriesInit"].Points.DataBindY(InitRes);
         }
 
         private async void buttonOptimizator_Click(object sender, EventArgs e)
@@ -69,15 +72,23 @@ namespace KernLinOpt
             //0. Выключаем кнопки
             buttonGenerator.Enabled = false;
             buttonReset.Enabled = false;
-            
+            buttonOptimizator.Enabled = false;
+            toolStripStatusLabel.Text = "Выполнение...";
+            panel.UseWaitCursor = true;
+
             //1. Делаем асинхронно оптимизацию и выводим результат
-            int result = await objKL.DoKernLinAsync();
-            labelOptimizator.Text = "Ответ: "+ result + " мешков";
-            
+            int[] result = await objKL.DoKernLinAsync();
+            int resultLength = result.Length;
+            labelOptimizator.Text = "Ответ: " + resultLength + " мешков";
+            this.chart.Series["SeriesCurrent"].Points.DataBindY(result);
+
             //2. Включаем кнопки
             buttonOptimizator.Enabled = true;
             buttonGenerator.Enabled = true;
             buttonReset.Enabled = true;
+            buttonOptimizator.Enabled = true;
+            toolStripStatusLabel.Text = "Готово!";
+            panel.UseWaitCursor = false;
 
             //3. Выбираем в фокус кнопку оптимизации
             buttonOptimizator.Select();
@@ -89,7 +100,7 @@ namespace KernLinOpt
             buttonReset.Enabled = false;
             buttonInitCalc.Enabled = false;
             buttonOptimizator.Enabled = false;
-            
+
             //1. Разблокируем элементы ввода параметров конструктора
             domainUpDownTry.Enabled = true;
             domainUpDownSize.Enabled = true;
@@ -101,6 +112,11 @@ namespace KernLinOpt
 
             //3. Выбираем в фокус кнопку генерации
             buttonGenerator.Select();
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

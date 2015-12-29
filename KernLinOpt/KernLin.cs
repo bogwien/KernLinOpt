@@ -8,14 +8,13 @@ namespace KernLinOpt
 {
     class KernLin
     {
-        private int minValue = 40,
-                   maxValue = 80,
+        private int minValue = 10,
+                   maxValue = 60,
                    capacity = 100,
                    eps,
                    trying,
                    limiter,
                    size;
-
         private int[] initArr,
                       array,
                       arrayTmp,
@@ -57,9 +56,9 @@ namespace KernLinOpt
             items.Sort();
             return items.ToArray<int>();
         }
-        public int calcInitItems()
+        public int[] calcInitItems()
         {
-            return calcItems(initArr).Length;
+            return calcItems(initArr);
         }
         private void swapArrElements()
         {
@@ -95,7 +94,7 @@ namespace KernLinOpt
             eps *= (eps < limiter) ? 2 : 1;
             return true;
         }
-        public async Task<int> DoKernLinAsync()
+        public async Task<int[]> DoKernLinAsync()
         {
             eps = 4;
             await Task.Run(() =>
@@ -123,10 +122,10 @@ namespace KernLinOpt
                         }
                         else break;
                     }
-                    if (!better) eps /= 2;
+                    if (!better) { eps /= 2; }
                 }
             });
-            return itemsArr.Length;
+            return itemsArr;
         }
     }
 }
