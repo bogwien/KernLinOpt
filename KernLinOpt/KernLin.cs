@@ -131,56 +131,60 @@ namespace KernLinOpt
             });
             return itemsArr;
         }
-        public void FirstFitDecreasing()
+        public async Task<bool> FirstFitDecreasing()
         {
-            //Сортируем по убыванию
-            Array.Sort(array);
-            Array.Reverse(array);
-            
-            //Ассоциативный массив листов, в которых будут хранится элементы в i-той коробке
-            Dictionary<int, List<int>> result = new Dictionary<int, List<int>>();
-
-            //Заполняем коробки
-            foreach (var element in array)
+            await Task.Run(() =>
             {
-                int dicSize = result.Count;
-                bool added = false;
-                //Для всех элементов ищем коробку в которую они влезут
-                for (int dicCounter = 0; dicCounter < dicSize; dicCounter++)
+                //Сортируем по убыванию
+                Array.Sort(array);
+                Array.Reverse(array);
+
+                //Ассоциативный массив листов, в которых будут хранится элементы в i-той коробке
+                Dictionary<int, List<int>> result = new Dictionary<int, List<int>>();
+
+                //Заполняем коробки
+                foreach (var element in array)
                 {
-                    List<int> row = result[dicCounter];
-                    int curItem = row.Sum();
-                    if ((capacity - curItem) > element)
+                    int dicSize = result.Count;
+                    bool added = false;
+                    //Для всех элементов ищем коробку в которую они влезут
+                    for (int dicCounter = 0; dicCounter < dicSize; dicCounter++)
                     {
+                        List<int> row = result[dicCounter];
+                        int curItem = row.Sum();
+                        if ((capacity - curItem) > element)
+                        {
+                            row.Add(element);
+                            added = true;
+                            break;
+                        }
+                    }
+                    //Иначе добавляем еще одну коробку
+                    if (!added)
+                    {
+                        List<int> row = new List<int>();
                         row.Add(element);
+                        result.Add(dicSize, row);
                         added = true;
-                        break;
                     }
                 }
-                //Иначе добавляем еще одну коробку
-                if(!added)
-                {
-                    List<int> row = new List<int>();
-                    row.Add(element);
-                    result.Add(dicSize, row);
-                    added = true;
-                }
-            }
 
-            //Перезаполним исходный массив
-            int i = 0;
-            while(i < size)
-            {
-                foreach(KeyValuePair<int, List<int>> row in result)
+                //Перезаполним исходный массив
+                int i = 0;
+                while (i < size)
                 {
-                    foreach (var element in row.Value)
+                    foreach (KeyValuePair<int, List<int>> row in result)
                     {
-                        array[i] = element;
-                        ++i;
+                        foreach (var element in row.Value)
+                        {
+                            array[i] = element;
+                            ++i;
+                        }
                     }
                 }
-            }
-            Array.Reverse(array);
+                Array.Reverse(array);
+            });
+            return true;
         }
     }
 }

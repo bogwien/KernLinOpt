@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
+using System.Diagnostics;
 
 namespace KernLinOpt
 {
@@ -55,12 +55,20 @@ namespace KernLinOpt
             buttonInitCalc.Select();
         }
 
-        private void buttonInitCalc_Click(object sender, EventArgs e)
+        private async void buttonInitCalc_Click(object sender, EventArgs e)
         {
-            //0. Блокируем повторное нажатие(до резета или новой генерации массива)
+            //0. Выключаем кнопки
             buttonInitCalc.Enabled = false;
+            buttonGenerator.Enabled = false;
+            buttonReset.Enabled = false;
+            checkBoxFFD.Enabled = false;
+            toolStripStatusLabel.Text = "Выполнение...";
+            panel.UseWaitCursor = true;
 
             //1. Выполняем оценку массива и выводим результат в label
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+
             int[] InitRes = objKL.calcInitItems();
             int InitResLength = InitRes.Length;
             labelInitCalc.Text = "Результат: " + InitResLength + " мешков";
@@ -68,13 +76,21 @@ namespace KernLinOpt
             //2. Если включен чекбокс выполняем и отрисовываем First-Fit Decreasing (рабочий массив array)
             if (checkBoxFFD.Checked)
             {
-                objKL.FirstFitDecreasing();
-                this.chart.Series["SeriesCurrent"].Points.DataBindY(objKL.calcArrItems());
+                if (await objKL.FirstFitDecreasing())
+                {
+                    this.chart.Series["SeriesCurrent"].Points.DataBindY(objKL.calcArrItems());
+                }
             }
+            stopWatch.Stop();
+            TimeSpan ts = stopWatch.Elapsed;
+            string elapsedTime = String.Format("{0:00}:{1:00}.{2:00}", ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
 
-            //3. Включаем возможность вызвать оптимизацию, отключаем выбор FFD
+            //3. Включаем кнопки
             buttonOptimizator.Enabled = true;
-            checkBoxFFD.Enabled = false;
+            buttonGenerator.Enabled = true;
+            buttonReset.Enabled = true;
+            toolStripStatusLabel.Text = "Готово за " + elapsedTime;
+            panel.UseWaitCursor = false;
 
             //4. Выбираем в фокус кнопку оптимизации
             buttonOptimizator.Select();
@@ -91,17 +107,24 @@ namespace KernLinOpt
             panel.UseWaitCursor = true;
 
             //1. Делаем асинхронно оптимизацию и выводим результат
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+
             int[] result = await objKL.DoKernLinAsync();
             int resultLength = result.Length;
             labelOptimizator.Text = "Ответ: " + resultLength + " мешков";
             this.chart.Series["SeriesCurrent"].Points.DataBindY(result);
 
+            stopWatch.Stop();
+            TimeSpan ts = stopWatch.Elapsed;
+            string elapsedTime = String.Format("{0:00}:{1:00}.{2:00}", ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
+            
             //2. Включаем кнопки
             buttonOptimizator.Enabled = true;
             buttonGenerator.Enabled = true;
             buttonReset.Enabled = true;
             buttonOptimizator.Enabled = true;
-            toolStripStatusLabel.Text = "Готово!";
+            toolStripStatusLabel.Text = "Готово за " + elapsedTime;
             panel.UseWaitCursor = false;
 
             //3. Выбираем в фокус кнопку оптимизации

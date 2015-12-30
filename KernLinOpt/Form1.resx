@@ -843,6 +843,12 @@
   <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="toolStripStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 17</value>
+  </data>
+  <data name="toolStripStatusLabel.Text" xml:space="preserve">
+    <value>Готово!</value>
+  </data>
   <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 519</value>
   </data>
@@ -867,11 +873,23 @@
   <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="toolStripStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 17</value>
+  <data name="checkBoxFFD.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="toolStripStatusLabel.Text" xml:space="preserve">
-    <value>Готово!</value>
+  <data name="checkBoxFFD.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="checkBoxFFD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 143</value>
+  </data>
+  <data name="checkBoxFFD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 17</value>
+  </data>
+  <data name="checkBoxFFD.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="checkBoxFFD.Text" xml:space="preserve">
+    <value>First-Fit Decreasing</value>
   </data>
   <data name="&gt;&gt;checkBoxFFD.Name" xml:space="preserve">
     <value>checkBoxFFD</value>
@@ -884,6 +902,18 @@
   </data>
   <data name="&gt;&gt;checkBoxFFD.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="chart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 216</value>
+  </data>
+  <data name="chart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>528, 300</value>
+  </data>
+  <data name="chart.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chart.Text" xml:space="preserve">
+    <value>chart</value>
   </data>
   <data name="&gt;&gt;chart.Name" xml:space="preserve">
     <value>chart</value>
@@ -920,60 +950,6 @@
   </data>
   <data name="&gt;&gt;panel.ZOrder" xml:space="preserve">
     <value>14</value>
-  </data>
-  <data name="chart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 216</value>
-  </data>
-  <data name="chart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>528, 300</value>
-  </data>
-  <data name="chart.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="chart.Text" xml:space="preserve">
-    <value>chart</value>
-  </data>
-  <data name="&gt;&gt;chart.Name" xml:space="preserve">
-    <value>chart</value>
-  </data>
-  <data name="&gt;&gt;chart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
-  </data>
-  <data name="&gt;&gt;chart.Parent" xml:space="preserve">
-    <value>panel</value>
-  </data>
-  <data name="&gt;&gt;chart.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="checkBoxFFD.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBoxFFD.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="checkBoxFFD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 143</value>
-  </data>
-  <data name="checkBoxFFD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 17</value>
-  </data>
-  <data name="checkBoxFFD.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="checkBoxFFD.Text" xml:space="preserve">
-    <value>First-Fit Decreasing</value>
-  </data>
-  <data name="&gt;&gt;checkBoxFFD.Name" xml:space="preserve">
-    <value>checkBoxFFD</value>
-  </data>
-  <data name="&gt;&gt;checkBoxFFD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBoxFFD.Parent" xml:space="preserve">
-    <value>panel</value>
-  </data>
-  <data name="&gt;&gt;checkBoxFFD.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

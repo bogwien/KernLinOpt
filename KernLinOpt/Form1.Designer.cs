@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.buttonOptimizator = new System.Windows.Forms.Button();
             this.labelGenerator = new System.Windows.Forms.Label();
             this.buttonGenerator = new System.Windows.Forms.Button();
@@ -48,8 +48,8 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel = new System.Windows.Forms.Panel();
-            this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.checkBoxFFD = new System.Windows.Forms.CheckBox();
+            this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.statusStrip.SuspendLayout();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
@@ -259,40 +259,6 @@
             resources.ApplyResources(this.panel, "panel");
             this.panel.Name = "panel";
             // 
-            // chart
-            // 
-            this.chart.BackColor = System.Drawing.SystemColors.Control;
-            this.chart.BorderlineColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea2.Area3DStyle.Inclination = 20;
-            chartArea2.Area3DStyle.IsRightAngleAxes = false;
-            chartArea2.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-            chartArea2.Area3DStyle.Perspective = 5;
-            chartArea2.Area3DStyle.PointDepth = 50;
-            chartArea2.Area3DStyle.PointGapDepth = 10;
-            chartArea2.Area3DStyle.Rotation = 10;
-            chartArea2.Area3DStyle.WallWidth = 5;
-            chartArea2.AxisY.LabelAutoFitMinFontSize = 5;
-            chartArea2.AxisY.MaximumAutoSize = 80F;
-            chartArea2.AxisY2.LabelAutoFitMinFontSize = 5;
-            chartArea2.AxisY2.MaximumAutoSize = 80F;
-            chartArea2.Name = "ChartArea";
-            this.chart.ChartAreas.Add(chartArea2);
-            this.chart.Cursor = System.Windows.Forms.Cursors.Cross;
-            resources.ApplyResources(this.chart, "chart");
-            this.chart.Name = "chart";
-            this.chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series3.ChartArea = "ChartArea";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            series3.Name = "SeriesInit";
-            series3.YValuesPerPoint = 2;
-            series4.ChartArea = "ChartArea";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Name = "SeriesCurrent";
-            series4.YValuesPerPoint = 2;
-            this.chart.Series.Add(series3);
-            this.chart.Series.Add(series4);
-            // 
             // checkBoxFFD
             // 
             resources.ApplyResources(this.checkBoxFFD, "checkBoxFFD");
@@ -300,6 +266,40 @@
             this.checkBoxFFD.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxFFD.Name = "checkBoxFFD";
             this.checkBoxFFD.UseVisualStyleBackColor = true;
+            // 
+            // chart
+            // 
+            this.chart.BackColor = System.Drawing.SystemColors.Control;
+            this.chart.BorderlineColor = System.Drawing.SystemColors.ActiveBorder;
+            chartArea1.Area3DStyle.Inclination = 20;
+            chartArea1.Area3DStyle.IsRightAngleAxes = false;
+            chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea1.Area3DStyle.Perspective = 5;
+            chartArea1.Area3DStyle.PointDepth = 50;
+            chartArea1.Area3DStyle.PointGapDepth = 10;
+            chartArea1.Area3DStyle.Rotation = 10;
+            chartArea1.Area3DStyle.WallWidth = 5;
+            chartArea1.AxisY.LabelAutoFitMinFontSize = 5;
+            chartArea1.AxisY.MaximumAutoSize = 80F;
+            chartArea1.AxisY2.LabelAutoFitMinFontSize = 5;
+            chartArea1.AxisY2.MaximumAutoSize = 80F;
+            chartArea1.Name = "ChartArea";
+            this.chart.ChartAreas.Add(chartArea1);
+            this.chart.Cursor = System.Windows.Forms.Cursors.Cross;
+            resources.ApplyResources(this.chart, "chart");
+            this.chart.Name = "chart";
+            this.chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
+            series1.ChartArea = "ChartArea";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            series1.Name = "SeriesInit";
+            series1.YValuesPerPoint = 2;
+            series2.ChartArea = "ChartArea";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Name = "SeriesCurrent";
+            series2.YValuesPerPoint = 2;
+            this.chart.Series.Add(series1);
+            this.chart.Series.Add(series2);
             // 
             // FormMain
             // 
