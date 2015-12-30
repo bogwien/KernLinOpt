@@ -8,9 +8,9 @@ namespace KernLinOpt
 {
     class KernLin
     {
-        private int minValue = 10,
-                   maxValue = 60,
-                   capacity = 100,
+        private int minValue    = 10,
+                   maxValue     = 60,
+                   capacity     = 100,
                    eps,
                    trying,
                    limiter,
@@ -23,12 +23,12 @@ namespace KernLinOpt
 
         public KernLin(int sizeInp, int tryingInp)
         {
-            initArr = new int[sizeInp];
-            array = new int[sizeInp];
-            arrayTmp = new int[sizeInp];
-            size = sizeInp;
-            trying = tryingInp;
-            limiter = (sizeInp / 3);
+            initArr     = new int[sizeInp];
+            array       = new int[sizeInp];
+            arrayTmp    = new int[sizeInp];
+            size        = sizeInp;
+            trying      = tryingInp;
+            limiter     = (sizeInp / 3);
         }
         public void RandArr()
         {
@@ -59,6 +59,10 @@ namespace KernLinOpt
         public int[] calcInitItems()
         {
             return calcItems(initArr);
+        }
+        public int[] calcArrItems()
+        {
+            return calcItems(array);
         }
         private void swapArrElements()
         {
@@ -126,6 +130,57 @@ namespace KernLinOpt
                 }
             });
             return itemsArr;
+        }
+        public void FirstFitDecreasing()
+        {
+            //Сортируем по убыванию
+            Array.Sort(array);
+            Array.Reverse(array);
+            
+            //Ассоциативный массив листов, в которых будут хранится элементы в i-той коробке
+            Dictionary<int, List<int>> result = new Dictionary<int, List<int>>();
+
+            //Заполняем коробки
+            foreach (var element in array)
+            {
+                int dicSize = result.Count;
+                bool added = false;
+                //Для всех элементов ищем коробку в которую они влезут
+                for (int dicCounter = 0; dicCounter < dicSize; dicCounter++)
+                {
+                    List<int> row = result[dicCounter];
+                    int curItem = row.Sum();
+                    if ((capacity - curItem) > element)
+                    {
+                        row.Add(element);
+                        added = true;
+                        break;
+                    }
+                }
+                //Иначе добавляем еще одну коробку
+                if(!added)
+                {
+                    List<int> row = new List<int>();
+                    row.Add(element);
+                    result.Add(dicSize, row);
+                    added = true;
+                }
+            }
+
+            //Перезаполним исходный массив
+            int i = 0;
+            while(i < size)
+            {
+                foreach(KeyValuePair<int, List<int>> row in result)
+                {
+                    foreach (var element in row.Value)
+                    {
+                        array[i] = element;
+                        ++i;
+                    }
+                }
+            }
+            Array.Reverse(array);
         }
     }
 }

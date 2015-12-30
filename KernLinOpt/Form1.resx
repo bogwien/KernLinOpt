@@ -133,7 +133,7 @@
     <value>107, 23</value>
   </data>
   <data name="buttonOptimizator.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>5</value>
   </data>
   <data name="buttonOptimizator.Text" xml:space="preserve">
     <value>Оптимизировать</value>
@@ -148,7 +148,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonOptimizator.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="labelGenerator.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -181,7 +181,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelGenerator.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="buttonGenerator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -193,7 +193,7 @@
     <value>107, 23</value>
   </data>
   <data name="buttonGenerator.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="buttonGenerator.Text" xml:space="preserve">
     <value>Сгенерировать</value>
@@ -208,7 +208,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonGenerator.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="labelOptimizator.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -238,7 +238,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelOptimizator.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="buttonInitCalc.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -253,7 +253,7 @@
     <value>107, 23</value>
   </data>
   <data name="buttonInitCalc.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="buttonInitCalc.Text" xml:space="preserve">
     <value>Оценить</value>
@@ -268,7 +268,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonInitCalc.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="labelInitCalc.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -298,7 +298,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelInitCalc.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="domainUpDownSize.Items" xml:space="preserve">
     <value>10</value>
@@ -400,10 +400,10 @@
     <value>120, 20</value>
   </data>
   <data name="domainUpDownSize.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>0</value>
   </data>
   <data name="domainUpDownSize.Text" xml:space="preserve">
-    <value>50</value>
+    <value>100</value>
   </data>
   <data name="domainUpDownSize.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
@@ -418,7 +418,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;domainUpDownSize.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="labelSize.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -451,7 +451,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelSize.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -484,7 +484,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="domainUpDownTry.Items" xml:space="preserve">
     <value>1</value>
@@ -718,10 +718,10 @@
     <value>120, 20</value>
   </data>
   <data name="domainUpDownTry.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>1</value>
   </data>
   <data name="domainUpDownTry.Text" xml:space="preserve">
-    <value>100</value>
+    <value>1000</value>
   </data>
   <data name="domainUpDownTry.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
@@ -736,7 +736,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;domainUpDownTry.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -772,7 +772,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -808,7 +808,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="buttonReset.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -823,7 +823,7 @@
     <value>41, 29</value>
   </data>
   <data name="buttonReset.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>5</value>
   </data>
   <data name="buttonReset.Text" xml:space="preserve">
     <value>reset</value>
@@ -838,17 +838,11 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonReset.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="toolStripStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 17</value>
-  </data>
-  <data name="toolStripStatusLabel.Text" xml:space="preserve">
-    <value>Готово!</value>
-  </data>
   <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 519</value>
   </data>
@@ -871,49 +865,25 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="buttonSave.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonSave.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 162</value>
-  </data>
-  <data name="buttonSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="buttonSave.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="buttonSave.Text" xml:space="preserve">
-    <value>Сохранить</value>
-  </data>
-  <data name="&gt;&gt;buttonSave.Name" xml:space="preserve">
-    <value>buttonSave</value>
-  </data>
-  <data name="&gt;&gt;buttonSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonSave.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonSave.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="chart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 216</value>
+  <data name="toolStripStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 17</value>
   </data>
-  <data name="chart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>528, 300</value>
+  <data name="toolStripStatusLabel.Text" xml:space="preserve">
+    <value>Готово!</value>
   </data>
-  <data name="chart.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;checkBoxFFD.Name" xml:space="preserve">
+    <value>checkBoxFFD</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFFD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFFD.Parent" xml:space="preserve">
+    <value>panel</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFFD.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="chart.Text" xml:space="preserve">
-    <value>chart</value>
   </data>
   <data name="&gt;&gt;chart.Name" xml:space="preserve">
     <value>chart</value>
@@ -925,7 +895,7 @@
     <value>panel</value>
   </data>
   <data name="&gt;&gt;chart.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -949,7 +919,61 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>14</value>
+  </data>
+  <data name="chart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 216</value>
+  </data>
+  <data name="chart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>528, 300</value>
+  </data>
+  <data name="chart.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chart.Text" xml:space="preserve">
+    <value>chart</value>
+  </data>
+  <data name="&gt;&gt;chart.Name" xml:space="preserve">
+    <value>chart</value>
+  </data>
+  <data name="&gt;&gt;chart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;chart.Parent" xml:space="preserve">
+    <value>panel</value>
+  </data>
+  <data name="&gt;&gt;chart.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkBoxFFD.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxFFD.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="checkBoxFFD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 143</value>
+  </data>
+  <data name="checkBoxFFD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 17</value>
+  </data>
+  <data name="checkBoxFFD.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="checkBoxFFD.Text" xml:space="preserve">
+    <value>First-Fit Decreasing</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFFD.Name" xml:space="preserve">
+    <value>checkBoxFFD</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFFD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFFD.Parent" xml:space="preserve">
+    <value>panel</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFFD.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -965,9 +989,6 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>547, 541</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>567, 583</value>

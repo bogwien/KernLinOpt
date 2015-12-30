@@ -26,26 +26,32 @@ namespace KernLinOpt
             buttonOptimizator.Enabled = false;
             labelInitCalc.Text = "Оцените начальную последовательность";
             labelOptimizator.Text = "Оптимизируйте!";
+            
+            //1. Очищаем график
+            this.chart.Series["SeriesInit"].Points.Clear();
+            this.chart.Series["SeriesCurrent"].Points.Clear();
 
-            //1. Выключаем возможность менять параметры конструктора(для юзабилити)
+            //2. Выключаем возможность менять параметры конструктора(для юзабилити)
             domainUpDownTry.Enabled = false;
             domainUpDownSize.Enabled = false;
 
-            //2. Вызываем конструктор
+            //3. Вызываем конструктор
             int trying = Convert.ToInt32(domainUpDownTry.Text);
             int size = Convert.ToInt32(domainUpDownSize.Text);
             objKL = new KernLin(size, trying);
 
-            //3. Заполняем массив случайными данными
+            //4. Заполняем массив случайными данными
             objKL.RandArr();
 
-            //4. Отображаем результат в label
+            //5. Отображаем результат в label
             labelGenerator.Text = "Массив из " + size + " элементов - готов!";
 
-            //5. Включаем кнопки оценки и reset
+            //6. Включаем кнопки оценки и reset
             buttonInitCalc.Enabled = true;
             buttonReset.Enabled = true;
-            //6. Выбираем в фокус кнопку оценки
+            checkBoxFFD.Enabled = true;
+
+            //7. Выбираем в фокус кнопку оценки
             buttonInitCalc.Select();
         }
 
@@ -59,10 +65,18 @@ namespace KernLinOpt
             int InitResLength = InitRes.Length;
             labelInitCalc.Text = "Результат: " + InitResLength + " мешков";
 
-            //2. Включаем возможность вызвать оптимизацию
-            buttonOptimizator.Enabled = true;
+            //2. Если включен чекбокс выполняем и отрисовываем First-Fit Decreasing (рабочий массив array)
+            if (checkBoxFFD.Checked)
+            {
+                objKL.FirstFitDecreasing();
+                this.chart.Series["SeriesCurrent"].Points.DataBindY(objKL.calcArrItems());
+            }
 
-            //3. Выбираем в фокус кнопку оптимизации
+            //3. Включаем возможность вызвать оптимизацию, отключаем выбор FFD
+            buttonOptimizator.Enabled = true;
+            checkBoxFFD.Enabled = false;
+
+            //4. Выбираем в фокус кнопку оптимизации
             buttonOptimizator.Select();
             this.chart.Series["SeriesInit"].Points.DataBindY(InitRes);
         }
@@ -101,9 +115,10 @@ namespace KernLinOpt
             buttonInitCalc.Enabled = false;
             buttonOptimizator.Enabled = false;
 
-            //1. Разблокируем элементы ввода параметров конструктора
+            //1. Разблокируем элементы ввода параметров конструктора и выбор FFD
             domainUpDownTry.Enabled = true;
             domainUpDownSize.Enabled = true;
+            checkBoxFFD.Enabled = true;
 
             //2. Восстанавливаем исходные label
             labelGenerator.Text = "Сгенерируйте массив";
@@ -112,11 +127,10 @@ namespace KernLinOpt
 
             //3. Выбираем в фокус кнопку генерации
             buttonGenerator.Select();
-        }
 
-        private void buttonSave_Click(object sender, EventArgs e)
-        {
-
+            //4. Очищаем график
+            this.chart.Series["SeriesInit"].Points.Clear();
+            this.chart.Series["SeriesCurrent"].Points.Clear();
         }
     }
 }
