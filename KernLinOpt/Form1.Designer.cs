@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.buttonOptimizator = new System.Windows.Forms.Button();
             this.labelGenerator = new System.Windows.Forms.Label();
             this.buttonGenerator = new System.Windows.Forms.Button();
@@ -48,8 +48,18 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel = new System.Windows.Forms.Panel();
+            this.buttonOpenF = new System.Windows.Forms.Button();
+            this.buttonSaveF = new System.Windows.Forms.Button();
+            this.labelMax = new System.Windows.Forms.Label();
+            this.labelMin = new System.Windows.Forms.Label();
+            this.comboBoxMax = new System.Windows.Forms.ComboBox();
+            this.comboBoxMin = new System.Windows.Forms.ComboBox();
+            this.comboBoxCapacity = new System.Windows.Forms.ComboBox();
+            this.labelCapacity = new System.Windows.Forms.Label();
             this.checkBoxFFD = new System.Windows.Forms.CheckBox();
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.statusStrip.SuspendLayout();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
@@ -64,6 +74,8 @@
             // 
             // labelGenerator
             // 
+            this.labelGenerator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelGenerator.Cursor = System.Windows.Forms.Cursors.IBeam;
             resources.ApplyResources(this.labelGenerator, "labelGenerator");
             this.labelGenerator.Name = "labelGenerator";
             // 
@@ -76,6 +88,8 @@
             // 
             // labelOptimizator
             // 
+            this.labelOptimizator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelOptimizator.Cursor = System.Windows.Forms.Cursors.IBeam;
             resources.ApplyResources(this.labelOptimizator, "labelOptimizator");
             this.labelOptimizator.Name = "labelOptimizator";
             // 
@@ -88,6 +102,8 @@
             // 
             // labelInitCalc
             // 
+            this.labelInitCalc.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelInitCalc.Cursor = System.Windows.Forms.Cursors.IBeam;
             resources.ApplyResources(this.labelInitCalc, "labelInitCalc");
             this.labelInitCalc.Name = "labelInitCalc";
             // 
@@ -233,9 +249,11 @@
             // 
             // buttonReset
             // 
+            this.buttonReset.BackColor = System.Drawing.SystemColors.ButtonShadow;
             resources.ApplyResources(this.buttonReset, "buttonReset");
+            this.buttonReset.ForeColor = System.Drawing.Color.White;
             this.buttonReset.Name = "buttonReset";
-            this.buttonReset.UseVisualStyleBackColor = true;
+            this.buttonReset.UseVisualStyleBackColor = false;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
             // statusStrip
@@ -254,71 +272,196 @@
             // 
             // panel
             // 
+            this.panel.Controls.Add(this.buttonOpenF);
+            this.panel.Controls.Add(this.buttonSaveF);
+            this.panel.Controls.Add(this.labelMax);
+            this.panel.Controls.Add(this.labelMin);
+            this.panel.Controls.Add(this.comboBoxMax);
+            this.panel.Controls.Add(this.comboBoxMin);
+            this.panel.Controls.Add(this.comboBoxCapacity);
+            this.panel.Controls.Add(this.domainUpDownTry);
+            this.panel.Controls.Add(this.label2);
+            this.panel.Controls.Add(this.label1);
+            this.panel.Controls.Add(this.label3);
+            this.panel.Controls.Add(this.labelCapacity);
             this.panel.Controls.Add(this.checkBoxFFD);
+            this.panel.Controls.Add(this.domainUpDownSize);
+            this.panel.Controls.Add(this.labelSize);
+            this.panel.Controls.Add(this.buttonReset);
             this.panel.Controls.Add(this.chart);
+            this.panel.Controls.Add(this.labelOptimizator);
+            this.panel.Controls.Add(this.labelInitCalc);
+            this.panel.Controls.Add(this.buttonOptimizator);
+            this.panel.Controls.Add(this.buttonGenerator);
+            this.panel.Controls.Add(this.buttonInitCalc);
+            this.panel.Controls.Add(this.labelGenerator);
             resources.ApplyResources(this.panel, "panel");
             this.panel.Name = "panel";
+            // 
+            // buttonOpenF
+            // 
+            resources.ApplyResources(this.buttonOpenF, "buttonOpenF");
+            this.buttonOpenF.Name = "buttonOpenF";
+            this.buttonOpenF.UseVisualStyleBackColor = true;
+            this.buttonOpenF.Click += new System.EventHandler(this.buttonOpenF_Click);
+            // 
+            // buttonSaveF
+            // 
+            resources.ApplyResources(this.buttonSaveF, "buttonSaveF");
+            this.buttonSaveF.Name = "buttonSaveF";
+            this.buttonSaveF.UseVisualStyleBackColor = true;
+            // 
+            // labelMax
+            // 
+            resources.ApplyResources(this.labelMax, "labelMax");
+            this.labelMax.Name = "labelMax";
+            // 
+            // labelMin
+            // 
+            resources.ApplyResources(this.labelMin, "labelMin");
+            this.labelMin.Name = "labelMin";
+            // 
+            // comboBoxMax
+            // 
+            this.comboBoxMax.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.comboBoxMax, "comboBoxMax");
+            this.comboBoxMax.FormattingEnabled = true;
+            this.comboBoxMax.Items.AddRange(new object[] {
+            resources.GetString("comboBoxMax.Items"),
+            resources.GetString("comboBoxMax.Items1"),
+            resources.GetString("comboBoxMax.Items2"),
+            resources.GetString("comboBoxMax.Items3"),
+            resources.GetString("comboBoxMax.Items4"),
+            resources.GetString("comboBoxMax.Items5"),
+            resources.GetString("comboBoxMax.Items6"),
+            resources.GetString("comboBoxMax.Items7"),
+            resources.GetString("comboBoxMax.Items8"),
+            resources.GetString("comboBoxMax.Items9"),
+            resources.GetString("comboBoxMax.Items10"),
+            resources.GetString("comboBoxMax.Items11"),
+            resources.GetString("comboBoxMax.Items12"),
+            resources.GetString("comboBoxMax.Items13"),
+            resources.GetString("comboBoxMax.Items14"),
+            resources.GetString("comboBoxMax.Items15"),
+            resources.GetString("comboBoxMax.Items16"),
+            resources.GetString("comboBoxMax.Items17"),
+            resources.GetString("comboBoxMax.Items18"),
+            resources.GetString("comboBoxMax.Items19"),
+            resources.GetString("comboBoxMax.Items20")});
+            this.comboBoxMax.Name = "comboBoxMax";
+            // 
+            // comboBoxMin
+            // 
+            this.comboBoxMin.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.comboBoxMin, "comboBoxMin");
+            this.comboBoxMin.FormattingEnabled = true;
+            this.comboBoxMin.Items.AddRange(new object[] {
+            resources.GetString("comboBoxMin.Items"),
+            resources.GetString("comboBoxMin.Items1"),
+            resources.GetString("comboBoxMin.Items2"),
+            resources.GetString("comboBoxMin.Items3"),
+            resources.GetString("comboBoxMin.Items4"),
+            resources.GetString("comboBoxMin.Items5"),
+            resources.GetString("comboBoxMin.Items6"),
+            resources.GetString("comboBoxMin.Items7"),
+            resources.GetString("comboBoxMin.Items8"),
+            resources.GetString("comboBoxMin.Items9"),
+            resources.GetString("comboBoxMin.Items10"),
+            resources.GetString("comboBoxMin.Items11"),
+            resources.GetString("comboBoxMin.Items12"),
+            resources.GetString("comboBoxMin.Items13"),
+            resources.GetString("comboBoxMin.Items14"),
+            resources.GetString("comboBoxMin.Items15"),
+            resources.GetString("comboBoxMin.Items16"),
+            resources.GetString("comboBoxMin.Items17"),
+            resources.GetString("comboBoxMin.Items18"),
+            resources.GetString("comboBoxMin.Items19"),
+            resources.GetString("comboBoxMin.Items20")});
+            this.comboBoxMin.Name = "comboBoxMin";
+            // 
+            // comboBoxCapacity
+            // 
+            this.comboBoxCapacity.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.comboBoxCapacity, "comboBoxCapacity");
+            this.comboBoxCapacity.FormattingEnabled = true;
+            this.comboBoxCapacity.Items.AddRange(new object[] {
+            resources.GetString("comboBoxCapacity.Items"),
+            resources.GetString("comboBoxCapacity.Items1"),
+            resources.GetString("comboBoxCapacity.Items2"),
+            resources.GetString("comboBoxCapacity.Items3"),
+            resources.GetString("comboBoxCapacity.Items4"),
+            resources.GetString("comboBoxCapacity.Items5"),
+            resources.GetString("comboBoxCapacity.Items6"),
+            resources.GetString("comboBoxCapacity.Items7"),
+            resources.GetString("comboBoxCapacity.Items8"),
+            resources.GetString("comboBoxCapacity.Items9"),
+            resources.GetString("comboBoxCapacity.Items10"),
+            resources.GetString("comboBoxCapacity.Items11"),
+            resources.GetString("comboBoxCapacity.Items12"),
+            resources.GetString("comboBoxCapacity.Items13"),
+            resources.GetString("comboBoxCapacity.Items14"),
+            resources.GetString("comboBoxCapacity.Items15"),
+            resources.GetString("comboBoxCapacity.Items16"),
+            resources.GetString("comboBoxCapacity.Items17"),
+            resources.GetString("comboBoxCapacity.Items18"),
+            resources.GetString("comboBoxCapacity.Items19"),
+            resources.GetString("comboBoxCapacity.Items20")});
+            this.comboBoxCapacity.Name = "comboBoxCapacity";
+            // 
+            // labelCapacity
+            // 
+            resources.ApplyResources(this.labelCapacity, "labelCapacity");
+            this.labelCapacity.Name = "labelCapacity";
             // 
             // checkBoxFFD
             // 
             resources.ApplyResources(this.checkBoxFFD, "checkBoxFFD");
+            this.checkBoxFFD.BackColor = System.Drawing.Color.Lime;
             this.checkBoxFFD.Checked = true;
             this.checkBoxFFD.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxFFD.Name = "checkBoxFFD";
-            this.checkBoxFFD.UseVisualStyleBackColor = true;
+            this.checkBoxFFD.UseVisualStyleBackColor = false;
             // 
             // chart
             // 
             this.chart.BackColor = System.Drawing.SystemColors.Control;
             this.chart.BorderlineColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea1.Area3DStyle.Inclination = 20;
-            chartArea1.Area3DStyle.IsRightAngleAxes = false;
-            chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-            chartArea1.Area3DStyle.Perspective = 5;
-            chartArea1.Area3DStyle.PointDepth = 50;
-            chartArea1.Area3DStyle.PointGapDepth = 10;
-            chartArea1.Area3DStyle.Rotation = 10;
-            chartArea1.Area3DStyle.WallWidth = 5;
-            chartArea1.AxisY.LabelAutoFitMinFontSize = 5;
-            chartArea1.AxisY.MaximumAutoSize = 80F;
-            chartArea1.AxisY2.LabelAutoFitMinFontSize = 5;
-            chartArea1.AxisY2.MaximumAutoSize = 80F;
-            chartArea1.Name = "ChartArea";
-            this.chart.ChartAreas.Add(chartArea1);
+            chartArea2.Area3DStyle.Inclination = 20;
+            chartArea2.Area3DStyle.IsRightAngleAxes = false;
+            chartArea2.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea2.Area3DStyle.Perspective = 5;
+            chartArea2.Area3DStyle.PointDepth = 50;
+            chartArea2.Area3DStyle.PointGapDepth = 10;
+            chartArea2.Area3DStyle.Rotation = 10;
+            chartArea2.Area3DStyle.WallWidth = 5;
+            chartArea2.AxisY.LabelAutoFitMinFontSize = 5;
+            chartArea2.AxisY.MaximumAutoSize = 80F;
+            chartArea2.AxisY2.LabelAutoFitMinFontSize = 5;
+            chartArea2.AxisY2.MaximumAutoSize = 80F;
+            chartArea2.Name = "ChartArea";
+            this.chart.ChartAreas.Add(chartArea2);
             this.chart.Cursor = System.Windows.Forms.Cursors.Cross;
             resources.ApplyResources(this.chart, "chart");
             this.chart.Name = "chart";
             this.chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series1.ChartArea = "ChartArea";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            series1.Name = "SeriesInit";
-            series1.YValuesPerPoint = 2;
-            series2.ChartArea = "ChartArea";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Name = "SeriesCurrent";
-            series2.YValuesPerPoint = 2;
-            this.chart.Series.Add(series1);
-            this.chart.Series.Add(series2);
+            series3.ChartArea = "ChartArea";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            series3.Name = "SeriesInit";
+            series3.YValuesPerPoint = 2;
+            series4.ChartArea = "ChartArea";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Name = "SeriesCurrent";
+            series4.YValuesPerPoint = 2;
+            this.chart.Series.Add(series3);
+            this.chart.Series.Add(series4);
             // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.statusStrip);
-            this.Controls.Add(this.buttonReset);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.domainUpDownTry);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.labelSize);
-            this.Controls.Add(this.domainUpDownSize);
-            this.Controls.Add(this.labelInitCalc);
-            this.Controls.Add(this.buttonInitCalc);
-            this.Controls.Add(this.labelOptimizator);
-            this.Controls.Add(this.buttonGenerator);
-            this.Controls.Add(this.labelGenerator);
-            this.Controls.Add(this.buttonOptimizator);
             this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -354,6 +497,16 @@
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart;
         private System.Windows.Forms.CheckBox checkBoxFFD;
+        private System.Windows.Forms.Label labelCapacity;
+        private System.Windows.Forms.ComboBox comboBoxCapacity;
+        private System.Windows.Forms.Label labelMax;
+        private System.Windows.Forms.Label labelMin;
+        private System.Windows.Forms.ComboBox comboBoxMax;
+        private System.Windows.Forms.ComboBox comboBoxMin;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.Button buttonOpenF;
+        private System.Windows.Forms.Button buttonSaveF;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
 

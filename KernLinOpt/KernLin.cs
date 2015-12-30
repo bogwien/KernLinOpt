@@ -8,12 +8,10 @@ namespace KernLinOpt
 {
     class KernLin
     {
-        private int minValue    = 10,
-                   maxValue     = 60,
-                   capacity     = 100,
-                   eps,
+        private int minValue, maxValue,
+                   capacity,
+                   eps, limiter,
                    trying,
-                   limiter,
                    size;
         private int[] initArr,
                       array,
@@ -21,14 +19,28 @@ namespace KernLinOpt
                       itemsArr,
                       itemsArrTmp;
 
-        public KernLin(int sizeInp, int tryingInp)
+        public KernLin(int sizeInp, int tryingInp, int capaInp, int minInp, int maxInp)
         {
             initArr     = new int[sizeInp];
             array       = new int[sizeInp];
             arrayTmp    = new int[sizeInp];
             size        = sizeInp;
             trying      = tryingInp;
+            capacity    = capaInp;
+            minValue    = minInp;
+            maxValue    = maxInp;
             limiter     = (sizeInp / 3);
+        }
+        public KernLin(List<string> arr, int tryingInp, int capaInp)
+        {
+            size        = arr.Count;
+            array       = new int[size];
+            arrayTmp    = new int[size];
+            initArr     = arr.Select(int.Parse).ToArray();
+            limiter     = (size / 3);
+            trying      = tryingInp;
+            capacity    = capaInp;
+            initArr.CopyTo(array, 0);
         }
         public void RandArr()
         {
@@ -100,7 +112,7 @@ namespace KernLinOpt
         }
         public async Task<int[]> DoKernLinAsync()
         {
-            eps = 4;
+            eps = 32;
             await Task.Run(() =>
             {
                 itemsArr = calcItems(array);

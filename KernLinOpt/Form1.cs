@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.IO;
 
 namespace KernLinOpt
 {
@@ -32,27 +33,45 @@ namespace KernLinOpt
             this.chart.Series["SeriesCurrent"].Points.Clear();
 
             //2. Выключаем возможность менять параметры конструктора(для юзабилити)
-            domainUpDownTry.Enabled = false;
-            domainUpDownSize.Enabled = false;
+            domainUpDownTry.Enabled     = false;
+            domainUpDownSize.Enabled    = false;
+            comboBoxCapacity.Enabled    = false;
+            comboBoxMin.Enabled         = false;
+            comboBoxMax.Enabled         = false;
 
             //3. Вызываем конструктор
-            int trying = Convert.ToInt32(domainUpDownTry.Text);
-            int size = Convert.ToInt32(domainUpDownSize.Text);
-            objKL = new KernLin(size, trying);
+            int trying      = Convert.ToInt32(domainUpDownTry.Text);
+            int size        = Convert.ToInt32(domainUpDownSize.Text);
+            int capacity    = Convert.ToInt32(comboBoxCapacity.Text);
+            int min         = Convert.ToInt32(comboBoxMin.Text);
+            int max         = Convert.ToInt32(comboBoxMax.Text);
 
-            //4. Заполняем массив случайными данными
-            objKL.RandArr();
+            if ((capacity < max) || (min > max))
+            {
+                showError();
+                domainUpDownTry.Enabled = true;
+                domainUpDownSize.Enabled = true;
+                comboBoxCapacity.Enabled = true;
+                comboBoxMin.Enabled = true;
+                comboBoxMax.Enabled = true;
+            }
+            else {
+                objKL = new KernLin(size, trying, capacity, min, max);
 
-            //5. Отображаем результат в label
-            labelGenerator.Text = "Массив из " + size + " элементов - готов!";
+                //4. Заполняем массив случайными данными
+                objKL.RandArr();
 
-            //6. Включаем кнопки оценки и reset
-            buttonInitCalc.Enabled = true;
-            buttonReset.Enabled = true;
-            checkBoxFFD.Enabled = true;
+                //5. Отображаем результат в label
+                labelGenerator.Text = "Массив из " + size + " элементов - готов!";
 
-            //7. Выбираем в фокус кнопку оценки
-            buttonInitCalc.Select();
+                //6. Включаем кнопки оценки и reset
+                buttonInitCalc.Enabled = true;
+                buttonReset.Enabled = true;
+                checkBoxFFD.Enabled = true;
+
+                //7. Выбираем в фокус кнопку оценки
+                buttonInitCalc.Select();
+            }
         }
 
         private async void buttonInitCalc_Click(object sender, EventArgs e)
@@ -100,32 +119,34 @@ namespace KernLinOpt
         private async void buttonOptimizator_Click(object sender, EventArgs e)
         {
             //0. Выключаем кнопки
-            buttonGenerator.Enabled = false;
-            buttonReset.Enabled = false;
-            buttonOptimizator.Enabled = false;
-            toolStripStatusLabel.Text = "Выполнение...";
-            panel.UseWaitCursor = true;
+            buttonGenerator.Enabled     = false;
+            buttonReset.Enabled         = false;
+            buttonOptimizator.Enabled   = false;
+            buttonOpenF.Enabled         = false;
+            toolStripStatusLabel.Text   = "Выполнение...";
+            panel.UseWaitCursor         = true;
 
             //1. Делаем асинхронно оптимизацию и выводим результат
-            Stopwatch stopWatch = new Stopwatch();
+            Stopwatch stopWatch         = new Stopwatch();
             stopWatch.Start();
 
-            int[] result = await objKL.DoKernLinAsync();
-            int resultLength = result.Length;
-            labelOptimizator.Text = "Ответ: " + resultLength + " мешков";
+            int[] result                = await objKL.DoKernLinAsync();
+            int resultLength            = result.Length;
+            labelOptimizator.Text       = "Ответ: " + resultLength + " мешков";
             this.chart.Series["SeriesCurrent"].Points.DataBindY(result);
 
             stopWatch.Stop();
-            TimeSpan ts = stopWatch.Elapsed;
-            string elapsedTime = String.Format("{0:00}:{1:00}.{2:00}", ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
+            TimeSpan ts                 = stopWatch.Elapsed;
+            string elapsedTime          = String.Format("{0:00}:{1:00}.{2:00}", ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
             
             //2. Включаем кнопки
-            buttonOptimizator.Enabled = true;
-            buttonGenerator.Enabled = true;
-            buttonReset.Enabled = true;
-            buttonOptimizator.Enabled = true;
-            toolStripStatusLabel.Text = "Готово за " + elapsedTime;
-            panel.UseWaitCursor = false;
+            buttonOptimizator.Enabled   = true;
+            buttonGenerator.Enabled     = true;
+            buttonReset.Enabled         = true;
+            buttonOptimizator.Enabled   = true;
+            buttonOpenF.Enabled         = true;
+            toolStripStatusLabel.Text   = "Готово за " + elapsedTime;
+            panel.UseWaitCursor         = false;
 
             //3. Выбираем в фокус кнопку оптимизации
             buttonOptimizator.Select();
@@ -141,6 +162,9 @@ namespace KernLinOpt
             //1. Разблокируем элементы ввода параметров конструктора и выбор FFD
             domainUpDownTry.Enabled = true;
             domainUpDownSize.Enabled = true;
+            comboBoxCapacity.Enabled = true;
+            comboBoxMin.Enabled = true;
+            comboBoxMax.Enabled = true;
             checkBoxFFD.Enabled = true;
 
             //2. Восстанавливаем исходные label
@@ -154,6 +178,62 @@ namespace KernLinOpt
             //4. Очищаем график
             this.chart.Series["SeriesInit"].Points.Clear();
             this.chart.Series["SeriesCurrent"].Points.Clear();
+        }
+
+        private void showError()
+        {
+            formError error = new formError();
+            error.ShowDialog();
+        }
+        
+        private async void buttonOpenF_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text Files|*.txt";
+            openFileDialog.Title = "Select a Text File";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                List<string> lines = new List<string>();
+                StreamReader sr = new StreamReader(openFileDialog.FileName);
+                string line;
+                while ((line = await sr.ReadLineAsync()) != null)
+                {
+                    lines.Add(line);
+                }
+                sr.Close();
+
+                buttonGenerator.Enabled     = false;
+                buttonOptimizator.Enabled   = false;
+                buttonInitCalc.Enabled      = false;
+                domainUpDownTry.Enabled     = false;
+                domainUpDownSize.Enabled    = false;
+                comboBoxCapacity.Enabled    = false;
+                comboBoxMin.Enabled         = false;
+                comboBoxMax.Enabled         = false;
+                labelInitCalc.Text          = "Оцените начальную последовательность";
+                labelOptimizator.Text       = "Оптимизируйте!";
+                labelGenerator.Text         = "Массив открыт!";
+
+                this.chart.Series["SeriesInit"].Points.Clear();
+                this.chart.Series["SeriesCurrent"].Points.Clear();
+                
+                
+                int trying                  = Convert.ToInt32(domainUpDownTry.Text);
+                int capacity                = Convert.ToInt32(comboBoxCapacity.Text);
+
+                objKL                       = new KernLin(lines,trying,capacity);
+                
+                buttonInitCalc.Enabled      = true;
+                buttonReset.Enabled         = true;
+                checkBoxFFD.Enabled         = true;
+                
+                buttonInitCalc.Select();
+            }
+        }
+
+        private void saveFileDialog_FileOk(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }
