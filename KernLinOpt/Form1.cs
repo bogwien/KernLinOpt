@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
+using System.Threading;
 
 namespace KernLinOpt
 {
@@ -23,97 +24,96 @@ namespace KernLinOpt
 
         private void buttonGenerator_Click(object sender, EventArgs e)
         {
-            //0. Если кнопка нажата без reset, то блокируем кнопку оптимизации и возвращаем исходные label
-            buttonOptimizator.Enabled = false;
-            labelInitCalc.Text = "Оцените начальную последовательность";
-            labelOptimizator.Text = "Оптимизируйте!";
+            buttonOptimizator.Enabled   = false;
+            buttonOpenF.Enabled         = false;
+            labelInitCalc.Text          = "Оцените начальную последовательность";
+            labelOptimizator.Text       = "Оптимизируйте!";
             
-            //1. Очищаем график
             this.chart.Series["SeriesInit"].Points.Clear();
             this.chart.Series["SeriesCurrent"].Points.Clear();
-
-            //2. Выключаем возможность менять параметры конструктора(для юзабилити)
-            domainUpDownTry.Enabled     = false;
+            
             domainUpDownSize.Enabled    = false;
-            comboBoxCapacity.Enabled    = false;
             comboBoxMin.Enabled         = false;
             comboBoxMax.Enabled         = false;
-
-            //3. Вызываем конструктор
-            int trying      = Convert.ToInt32(domainUpDownTry.Text);
+            
             int size        = Convert.ToInt32(domainUpDownSize.Text);
-            int capacity    = Convert.ToInt32(comboBoxCapacity.Text);
             int min         = Convert.ToInt32(comboBoxMin.Text);
             int max         = Convert.ToInt32(comboBoxMax.Text);
-
-            if ((capacity < max) || (min > max))
-            {
-                showError();
-                domainUpDownTry.Enabled = true;
-                domainUpDownSize.Enabled = true;
-                comboBoxCapacity.Enabled = true;
-                comboBoxMin.Enabled = true;
-                comboBoxMax.Enabled = true;
-            }
-            else {
-                objKL = new KernLin(size, trying, capacity, min, max);
-
-                //4. Заполняем массив случайными данными
-                objKL.RandArr();
-
-                //5. Отображаем результат в label
-                labelGenerator.Text = "Массив из " + size + " элементов - готов!";
-
-                //6. Включаем кнопки оценки и reset
-                buttonInitCalc.Enabled = true;
-                buttonReset.Enabled = true;
-                checkBoxFFD.Enabled = true;
-
-                //7. Выбираем в фокус кнопку оценки
-                buttonInitCalc.Select();
-            }
+            
+            objKL           = new KernLin(size, min, max);
+            
+            objKL.RandArr();
+            
+            labelGenerator.Text     = "Массив из " + size + " элементов - готов!";
+            
+            buttonInitCalc.Enabled  = true;
+            buttonReset.Enabled     = true;
+            checkBoxFFD.Enabled     = true;
+            comboBoxCapacity.Enabled = true;
+            domainUpDownTry.Enabled = true;
+            //7. Выбираем в фокус кнопку оценки
+            buttonInitCalc.Select();
         }
 
         private async void buttonInitCalc_Click(object sender, EventArgs e)
         {
             //0. Выключаем кнопки
-            buttonInitCalc.Enabled = false;
-            buttonGenerator.Enabled = false;
-            buttonReset.Enabled = false;
-            checkBoxFFD.Enabled = false;
-            toolStripStatusLabel.Text = "Выполнение...";
-            panel.UseWaitCursor = true;
+            buttonInitCalc.Enabled      = false;
+            buttonGenerator.Enabled     = false;
+            buttonReset.Enabled         = false;
+            checkBoxFFD.Enabled         = false;
+            comboBoxCapacity.Enabled    = false;
+            domainUpDownTry.Enabled     = false;
+            toolStripStatusLabel.Text   = "Выполнение...";
+            panel.UseWaitCursor         = true;
 
-            //1. Выполняем оценку массива и выводим результат в label
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
 
-            int[] InitRes = objKL.calcInitItems();
-            int InitResLength = InitRes.Length;
-            labelInitCalc.Text = "Результат: " + InitResLength + " мешков";
-
-            //2. Если включен чекбокс выполняем и отрисовываем First-Fit Decreasing (рабочий массив array)
-            if (checkBoxFFD.Checked)
+            int capacity    = Convert.ToInt32(comboBoxCapacity.Text);
+            int trying      = Convert.ToInt32(domainUpDownTry.Text);
+            int min         = Convert.ToInt32(comboBoxMin.Text);
+            int max         = Convert.ToInt32(comboBoxMax.Text);
+            if ((capacity < max) || (min > max))
             {
-                if (await objKL.FirstFitDecreasing())
-                {
-                    this.chart.Series["SeriesCurrent"].Points.DataBindY(objKL.calcArrItems());
-                }
+                showError();
+                buttonInitCalc.Enabled = true;
+                buttonGenerator.Enabled = true;
+                buttonReset.Enabled = true;
+                checkBoxFFD.Enabled = true;
+                comboBoxCapacity.Enabled = true;
+                toolStripStatusLabel.Text = "Ошибка";
+                panel.UseWaitCursor = false;
             }
-            stopWatch.Stop();
-            TimeSpan ts = stopWatch.Elapsed;
-            string elapsedTime = String.Format("{0:00}:{1:00}.{2:00}", ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
+            else {
+                //1. Выполняем оценку массива и выводим результат в label
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                int[] InitRes = objKL.calcInitItems(trying, capacity);
+                int InitResLength = InitRes.Length;
+                labelInitCalc.Text = "Результат: " + InitResLength + " мешков";
 
-            //3. Включаем кнопки
-            buttonOptimizator.Enabled = true;
-            buttonGenerator.Enabled = true;
-            buttonReset.Enabled = true;
-            toolStripStatusLabel.Text = "Готово за " + elapsedTime;
-            panel.UseWaitCursor = false;
+                //2. Если включен чекбокс выполняем и отрисовываем First-Fit Decreasing (рабочий массив array)
+                if (checkBoxFFD.Checked)
+                {
+                    if (await objKL.FirstFitDecreasing())
+                    {
+                        this.chart.Series["SeriesCurrent"].Points.DataBindY(objKL.calcArrItems());
+                    }
+                }
+                stopWatch.Stop();
+                TimeSpan ts = stopWatch.Elapsed;
+                string elapsedTime = String.Format("{0:00}:{1:00}.{2:00}", ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
 
-            //4. Выбираем в фокус кнопку оптимизации
-            buttonOptimizator.Select();
-            this.chart.Series["SeriesInit"].Points.DataBindY(InitRes);
+                //3. Включаем кнопки
+                buttonOptimizator.Enabled = true;
+                buttonGenerator.Enabled = true;
+                buttonReset.Enabled = true;
+                toolStripStatusLabel.Text = "Готово за " + elapsedTime;
+                panel.UseWaitCursor = false;
+
+                //4. Выбираем в фокус кнопку оптимизации
+                buttonOptimizator.Select();
+                this.chart.Series["SeriesInit"].Points.DataBindY(InitRes);
+            }
         }
 
         private async void buttonOptimizator_Click(object sender, EventArgs e)
@@ -217,11 +217,7 @@ namespace KernLinOpt
                 this.chart.Series["SeriesInit"].Points.Clear();
                 this.chart.Series["SeriesCurrent"].Points.Clear();
                 
-                
-                int trying                  = Convert.ToInt32(domainUpDownTry.Text);
-                int capacity                = Convert.ToInt32(comboBoxCapacity.Text);
-
-                objKL                       = new KernLin(lines,trying,capacity);
+                objKL                       = new KernLin(lines);
                 
                 buttonInitCalc.Enabled      = true;
                 buttonReset.Enabled         = true;

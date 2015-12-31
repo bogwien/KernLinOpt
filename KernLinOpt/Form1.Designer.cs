@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.buttonOptimizator = new System.Windows.Forms.Button();
             this.labelGenerator = new System.Windows.Forms.Label();
             this.buttonGenerator = new System.Windows.Forms.Button();
@@ -42,14 +42,11 @@
             this.labelSize = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.domainUpDownTry = new System.Windows.Forms.DomainUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.buttonReset = new System.Windows.Forms.Button();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel = new System.Windows.Forms.Panel();
             this.buttonOpenF = new System.Windows.Forms.Button();
-            this.buttonSaveF = new System.Windows.Forms.Button();
             this.labelMax = new System.Windows.Forms.Label();
             this.labelMin = new System.Windows.Forms.Label();
             this.comboBoxMax = new System.Windows.Forms.ComboBox();
@@ -157,7 +154,7 @@
             // 
             // domainUpDownTry
             // 
-            this.domainUpDownTry.BackColor = System.Drawing.SystemColors.Info;
+            this.domainUpDownTry.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.domainUpDownTry.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.domainUpDownTry.Items.Add(resources.GetString("domainUpDownTry.Items"));
             this.domainUpDownTry.Items.Add(resources.GetString("domainUpDownTry.Items1"));
@@ -237,16 +234,6 @@
             resources.ApplyResources(this.domainUpDownTry, "domainUpDownTry");
             this.domainUpDownTry.Name = "domainUpDownTry";
             // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
             // buttonReset
             // 
             this.buttonReset.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -273,16 +260,13 @@
             // panel
             // 
             this.panel.Controls.Add(this.buttonOpenF);
-            this.panel.Controls.Add(this.buttonSaveF);
             this.panel.Controls.Add(this.labelMax);
             this.panel.Controls.Add(this.labelMin);
             this.panel.Controls.Add(this.comboBoxMax);
             this.panel.Controls.Add(this.comboBoxMin);
             this.panel.Controls.Add(this.comboBoxCapacity);
             this.panel.Controls.Add(this.domainUpDownTry);
-            this.panel.Controls.Add(this.label2);
             this.panel.Controls.Add(this.label1);
-            this.panel.Controls.Add(this.label3);
             this.panel.Controls.Add(this.labelCapacity);
             this.panel.Controls.Add(this.checkBoxFFD);
             this.panel.Controls.Add(this.domainUpDownSize);
@@ -304,12 +288,6 @@
             this.buttonOpenF.Name = "buttonOpenF";
             this.buttonOpenF.UseVisualStyleBackColor = true;
             this.buttonOpenF.Click += new System.EventHandler(this.buttonOpenF_Click);
-            // 
-            // buttonSaveF
-            // 
-            resources.ApplyResources(this.buttonSaveF, "buttonSaveF");
-            this.buttonSaveF.Name = "buttonSaveF";
-            this.buttonSaveF.UseVisualStyleBackColor = true;
             // 
             // labelMax
             // 
@@ -381,7 +359,7 @@
             // 
             // comboBoxCapacity
             // 
-            this.comboBoxCapacity.BackColor = System.Drawing.SystemColors.Info;
+            this.comboBoxCapacity.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             resources.ApplyResources(this.comboBoxCapacity, "comboBoxCapacity");
             this.comboBoxCapacity.FormattingEnabled = true;
             this.comboBoxCapacity.Items.AddRange(new object[] {
@@ -416,7 +394,6 @@
             // checkBoxFFD
             // 
             resources.ApplyResources(this.checkBoxFFD, "checkBoxFFD");
-            this.checkBoxFFD.BackColor = System.Drawing.Color.Lime;
             this.checkBoxFFD.Checked = true;
             this.checkBoxFFD.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxFFD.Name = "checkBoxFFD";
@@ -426,35 +403,35 @@
             // 
             this.chart.BackColor = System.Drawing.SystemColors.Control;
             this.chart.BorderlineColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea2.Area3DStyle.Inclination = 20;
-            chartArea2.Area3DStyle.IsRightAngleAxes = false;
-            chartArea2.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-            chartArea2.Area3DStyle.Perspective = 5;
-            chartArea2.Area3DStyle.PointDepth = 50;
-            chartArea2.Area3DStyle.PointGapDepth = 10;
-            chartArea2.Area3DStyle.Rotation = 10;
-            chartArea2.Area3DStyle.WallWidth = 5;
-            chartArea2.AxisY.LabelAutoFitMinFontSize = 5;
-            chartArea2.AxisY.MaximumAutoSize = 80F;
-            chartArea2.AxisY2.LabelAutoFitMinFontSize = 5;
-            chartArea2.AxisY2.MaximumAutoSize = 80F;
-            chartArea2.Name = "ChartArea";
-            this.chart.ChartAreas.Add(chartArea2);
+            chartArea3.Area3DStyle.Inclination = 20;
+            chartArea3.Area3DStyle.IsRightAngleAxes = false;
+            chartArea3.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea3.Area3DStyle.Perspective = 5;
+            chartArea3.Area3DStyle.PointDepth = 50;
+            chartArea3.Area3DStyle.PointGapDepth = 10;
+            chartArea3.Area3DStyle.Rotation = 10;
+            chartArea3.Area3DStyle.WallWidth = 5;
+            chartArea3.AxisY.LabelAutoFitMinFontSize = 5;
+            chartArea3.AxisY.MaximumAutoSize = 80F;
+            chartArea3.AxisY2.LabelAutoFitMinFontSize = 5;
+            chartArea3.AxisY2.MaximumAutoSize = 80F;
+            chartArea3.Name = "ChartArea";
+            this.chart.ChartAreas.Add(chartArea3);
             this.chart.Cursor = System.Windows.Forms.Cursors.Cross;
             resources.ApplyResources(this.chart, "chart");
             this.chart.Name = "chart";
             this.chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series3.ChartArea = "ChartArea";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            series3.Name = "SeriesInit";
-            series3.YValuesPerPoint = 2;
-            series4.ChartArea = "ChartArea";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Name = "SeriesCurrent";
-            series4.YValuesPerPoint = 2;
-            this.chart.Series.Add(series3);
-            this.chart.Series.Add(series4);
+            series5.ChartArea = "ChartArea";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            series5.Name = "SeriesInit";
+            series5.YValuesPerPoint = 2;
+            series6.ChartArea = "ChartArea";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Name = "SeriesCurrent";
+            series6.YValuesPerPoint = 2;
+            this.chart.Series.Add(series5);
+            this.chart.Series.Add(series6);
             // 
             // FormMain
             // 
@@ -489,8 +466,6 @@
         private System.Windows.Forms.Label labelSize;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DomainUpDown domainUpDownTry;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
@@ -505,7 +480,6 @@
         private System.Windows.Forms.ComboBox comboBoxMin;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button buttonOpenF;
-        private System.Windows.Forms.Button buttonSaveF;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }

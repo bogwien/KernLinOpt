@@ -19,27 +19,23 @@ namespace KernLinOpt
                       itemsArr,
                       itemsArrTmp;
 
-        public KernLin(int sizeInp, int tryingInp, int capaInp, int minInp, int maxInp)
+        public KernLin(int sizeInp, int minInp, int maxInp)
         {
             initArr     = new int[sizeInp];
             array       = new int[sizeInp];
             arrayTmp    = new int[sizeInp];
             size        = sizeInp;
-            trying      = tryingInp;
-            capacity    = capaInp;
             minValue    = minInp;
             maxValue    = maxInp;
             limiter     = (sizeInp / 3);
         }
-        public KernLin(List<string> arr, int tryingInp, int capaInp)
+        public KernLin(List<string> arr)
         {
             size        = arr.Count;
             array       = new int[size];
             arrayTmp    = new int[size];
             initArr     = arr.Select(int.Parse).ToArray();
             limiter     = (size / 3);
-            trying      = tryingInp;
-            capacity    = capaInp;
             initArr.CopyTo(array, 0);
         }
         public void RandArr()
@@ -68,8 +64,10 @@ namespace KernLinOpt
             items.Sort();
             return items.ToArray<int>();
         }
-        public int[] calcInitItems()
+        public int[] calcInitItems(int tryingInp, int capaInp)
         {
+            trying = tryingInp;
+            capacity = capaInp;
             return calcItems(initArr);
         }
         public int[] calcArrItems()
@@ -90,6 +88,7 @@ namespace KernLinOpt
         }
         private bool compareResidues()
         {
+            Array.Sort(itemsArr);
             int i = 0, sizeItems = itemsArr.Length;
             while (i < sizeItems)
             {
@@ -112,7 +111,7 @@ namespace KernLinOpt
         }
         public async Task<int[]> DoKernLinAsync()
         {
-            eps = 32;
+            eps = limiter;
             await Task.Run(() =>
             {
                 itemsArr = calcItems(array);
@@ -147,19 +146,15 @@ namespace KernLinOpt
         {
             await Task.Run(() =>
             {
-                //Сортируем по убыванию
                 Array.Sort(array);
                 Array.Reverse(array);
-
-                //Ассоциативный массив листов, в которых будут хранится элементы в i-той коробке
+                
                 Dictionary<int, List<int>> result = new Dictionary<int, List<int>>();
-
-                //Заполняем коробки
+                
                 foreach (var element in array)
                 {
                     int dicSize = result.Count;
                     bool added = false;
-                    //Для всех элементов ищем коробку в которую они влезут
                     for (int dicCounter = 0; dicCounter < dicSize; dicCounter++)
                     {
                         List<int> row = result[dicCounter];
@@ -171,7 +166,6 @@ namespace KernLinOpt
                             break;
                         }
                     }
-                    //Иначе добавляем еще одну коробку
                     if (!added)
                     {
                         List<int> row = new List<int>();
@@ -180,8 +174,7 @@ namespace KernLinOpt
                         added = true;
                     }
                 }
-
-                //Перезаполним исходный массив
+                
                 int i = 0;
                 while (i < size)
                 {
